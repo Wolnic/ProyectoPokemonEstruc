@@ -1,0 +1,27 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        
+        {
+            "type": "java",
+            "name": "Launch JavaFX App",
+            "request": "launch",
+            "mainClass": "controlador.Main",  // <-- esta es tu clase principal
+            "projectName": "ProyectoPokemonEstruc_94ff2ce4",
+            "vmArgs": "--module-path \"C:/Users/gjche/Downloads/openjfx-24_windows-x64_bin-sdk/javafx-sdk-24/lib\" --add-modules javafx.controls,javafx.fxml"
+        },
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "controlador.Main",
+            "projectName": "ProyectoPokemonEstruc_94ff2ce4"
+        }
+    ]
+}
