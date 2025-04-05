@@ -517,7 +517,7 @@
             </Label>
          </children>
       </StackPane>
-      <StackPane fx:id="stpSnorlax1" layoutX="403.0" layoutY="48.0" onMouseClicked="#selectCharizard" prefHeight="202.0" prefWidth="358.0" styleClass="pokemon-card-normal" stylesheets="@../resources/styles.css">
+      <StackPane fx:id="stpStaraptor" layoutX="403.0" layoutY="48.0" onMouseClicked="#selectCharizard" prefHeight="202.0" prefWidth="358.0" styleClass="pokemon-card-normal" stylesheets="@../resources/styles.css">
          <children>
             <Label fx:id="lblSnorlax1" alignment="BOTTOM_LEFT" contentDisplay="TOP" layoutX="50.0" layoutY="20.0" styleClass="pokemon-name" stylesheets="@../resources/styles.css" text="STARAPTOR" translateX="-70.0" translateY="-70.0" StackPane.alignment="CENTER">
                <font>
@@ -530,9 +530,9 @@
                   <String fx:value="bar" />
                </styleClass>
             </ProgressBar>
-            <ImageView fx:id="imgSnorlax1" fitHeight="153.0" fitWidth="135.0" pickOnBounds="true" StackPane.alignment="CENTER_RIGHT">
+            <ImageView fx:id="imgStaraptor" fitHeight="153.0" fitWidth="135.0" pickOnBounds="true" StackPane.alignment="CENTER_RIGHT">
                <image>
-                  <Image url="@../resources/snorlax.png" />
+                  <Image url="@../resources/staraptor.png" />
                </image>
                <styleClass>
                   <String fx:value="pokemon-image" />
