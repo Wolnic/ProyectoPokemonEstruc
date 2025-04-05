@@ -680,12 +680,12 @@
             </Label>
          </children>
       </StackPane>
-      <Button layoutX="388.0" layoutY="840.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="195.0" stylesheets="@../resources/styles.css" text="AGREGAR POKEMON">
+      <Button fx:id="btnAgregarPokemon" layoutX="388.0" layoutY="840.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="195.0" stylesheets="@../resources/styles.css" text="AGREGAR POKEMON">
          <styleClass>
             <String fx:value="pokemon-card-water" />
             <String fx:value="stat-value" />
          </styleClass>
       </Button>
-      <Label fx:id="lblTitulo" layoutX="641.0" layoutY="14.0" prefHeight="73.0" prefWidth="254.0" styleClass="pokemon-title" stylesheets="@../resources/styles.css" text="POKEDEX" />
+      <Label fx:id="lblTitulo" layoutX="623.0" layoutY="14.0" prefHeight="110.0" prefWidth="322.0" styleClass="pokemon-title" stylesheets="@../resources/styles.css" text="POKEDEX" />
    </children>
 </AnchorPane>

@@ -5,6 +5,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ProgressBar;
 import javafx.scene.image.ImageView;
@@ -241,6 +242,8 @@ public class CartasVistaController implements Initializable {
     private Label lblVida3111;
     @FXML
     private Label lblTitulo;
+    @FXML
+    private Button btnAgregarPokemon;
 
     /**
      * Initializes the controller class.
