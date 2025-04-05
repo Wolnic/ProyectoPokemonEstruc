@@ -1,9 +1,3 @@
-# Ignorar archivos de compilación
-*.class
-/build/
-
-# Ignorar carpetas de NetBeans
-nbproject/
 
 # No ignorar archivos ejecutables o de configuración específicos
 # Asegúrate de reemplazar "path/to/executables" con la ruta correcta
