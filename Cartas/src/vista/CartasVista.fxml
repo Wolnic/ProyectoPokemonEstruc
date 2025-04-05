@@ -485,19 +485,19 @@
                   <String fx:value="normal-image" />
                </styleClass>
             </ImageView>
-            <Label fx:id="lblAtaque3" alignment="BOTTOM_LEFT" stylesheets="@../resources/styles.css" text="ATA:  70HP" translateX="-125.0" translateY="-20.0">
+            <Label fx:id="lblAtaque3" alignment="BOTTOM_LEFT" stylesheets="@../resources/styles.css" text="ATA:  50HP" translateX="-125.0" translateY="-20.0">
                <styleClass>
                   <String fx:value="attack-value-normal" />
                   <String fx:value="stat-value" />
                </styleClass>
             </Label>
-            <Label fx:id="lblDefensa3" alignment="BOTTOM_LEFT" stylesheets="@../resources/styles.css" text="DEF:  50HP" translateX="-125.0" translateY="20.0">
+            <Label fx:id="lblDefensa3" alignment="BOTTOM_LEFT" stylesheets="@../resources/styles.css" text="DEF:  35HP" translateX="-125.0" translateY="20.0">
                <styleClass>
                   <String fx:value="defense-value-normal" />
                   <String fx:value="stat-value" />
                </styleClass>
             </Label>
-            <Label fx:id="lblAtaqueEspecial3" alignment="BOTTOM_LEFT" stylesheets="@../resources/styles.css" text="AESP:  80HP" translateX="-22.0" translateY="-20.0">
+            <Label fx:id="lblAtaqueEspecial3" alignment="BOTTOM_LEFT" stylesheets="@../resources/styles.css" text="AESP:  70HP" translateX="-22.0" translateY="-20.0">
                <styleClass>
                   <String fx:value="special-attack-value-normal" />
                   <String fx:value="stat-value" />
@@ -509,7 +509,7 @@
                   <String fx:value="stat-value" />
                </styleClass>
             </Label>
-            <Label fx:id="lblVida3" alignment="BOTTOM_LEFT" stylesheets="@../resources/styles.css" text="VIDA:  115HP" translateX="-70.0" translateY="80.0">
+            <Label fx:id="lblVida3" alignment="BOTTOM_LEFT" stylesheets="@../resources/styles.css" text="VIDA:  150HP" translateX="-70.0" translateY="80.0">
                <styleClass>
                   <String fx:value="hp-value-normal" />
                   <String fx:value="stat-value" />
@@ -539,19 +539,19 @@
                   <String fx:value="normal-image" />
                </styleClass>
             </ImageView>
-            <Label fx:id="lblAtaque31" alignment="BOTTOM_LEFT" stylesheets="@../resources/styles.css" text="ATA:  70HP" translateX="-125.0" translateY="-20.0">
+            <Label fx:id="lblAtaque31" alignment="BOTTOM_LEFT" stylesheets="@../resources/styles.css" text="ATA:  50HP" translateX="-125.0" translateY="-20.0">
                <styleClass>
                   <String fx:value="attack-value-normal" />
                   <String fx:value="stat-value" />
                </styleClass>
             </Label>
-            <Label fx:id="lblDefensa31" alignment="BOTTOM_LEFT" stylesheets="@../resources/styles.css" text="DEF:  50HP" translateX="-125.0" translateY="20.0">
+            <Label fx:id="lblDefensa31" alignment="BOTTOM_LEFT" stylesheets="@../resources/styles.css" text="DEF:  35HP" translateX="-125.0" translateY="20.0">
                <styleClass>
                   <String fx:value="defense-value-normal" />
                   <String fx:value="stat-value" />
                </styleClass>
             </Label>
-            <Label fx:id="lblAtaqueEspecial31" alignment="BOTTOM_LEFT" stylesheets="@../resources/styles.css" text="AESP:  80HP" translateX="-22.0" translateY="-20.0">
+            <Label fx:id="lblAtaqueEspecial31" alignment="BOTTOM_LEFT" stylesheets="@../resources/styles.css" text="AESP:  70HP" translateX="-22.0" translateY="-20.0">
                <styleClass>
                   <String fx:value="special-attack-value-normal" />
                   <String fx:value="stat-value" />
@@ -563,7 +563,7 @@
                   <String fx:value="stat-value" />
                </styleClass>
             </Label>
-            <Label fx:id="lblVida31" alignment="BOTTOM_LEFT" stylesheets="@../resources/styles.css" text="VIDA:  115HP" translateX="-70.0" translateY="80.0">
+            <Label fx:id="lblVida31" alignment="BOTTOM_LEFT" stylesheets="@../resources/styles.css" text="VIDA:  150HP" translateX="-70.0" translateY="80.0">
                <styleClass>
                   <String fx:value="hp-value-normal" />
                   <String fx:value="stat-value" />

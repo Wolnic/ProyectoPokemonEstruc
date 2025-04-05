@@ -120,7 +120,7 @@
 
 /* Barra de progreso para tipo Normal */
 .progress-bar-normal .bar {
-    -fx-background-color: linear-gradient(to right, #c7c4c7, #f4ece6);
+    -fx-background-color: linear-gradient(to right, #837c83, #f4ece6);
     -fx-background-radius: 10px;
     -fx-effect: innershadow(gaussian, rgba(255, 69, 0, 0.5), 10, 0, 0, 0);
 }
