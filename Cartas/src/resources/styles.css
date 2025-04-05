@@ -229,3 +229,15 @@
 .special-defense-value-water {
     -fx-background-color: #4169e1; /* Azul royal */
 }
+
+.pokemon-title {
+    -fx-font-family: "Impact", "Arial Black", sans-serif;
+    -fx-font-size: 60px;
+    -fx-text-fill: #FFD700; /* Dorado estilo Pikachu */
+    -fx-effect: dropshadow(gaussian, black, 5, 0.7, 3, 3);
+    -fx-stroke: #1E1E1E; /* Contorno oscuro */
+    -fx-stroke-width: 2px;
+    -fx-padding: 20px;
+    -fx-background-radius: 20px;
+    -fx-alignment: center;
+}

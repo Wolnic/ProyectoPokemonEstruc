@@ -242,6 +242,8 @@ public class CartasVistaController implements Initializable {
     private Label lblDefensaEspecial3111;
     @FXML
     private Label lblVida3111;
+    @FXML
+    private Label lblTitulo;
 
     /**
      * Initializes the controller class.
