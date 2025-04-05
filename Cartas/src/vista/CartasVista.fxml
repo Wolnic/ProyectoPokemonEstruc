@@ -353,9 +353,9 @@
             </Label>
          </children>
       </StackPane>
-      <StackPane fx:id="stpSwampert" layoutX="783.0" layoutY="500.0" onMouseClicked="#selectCharizard" prefHeight="202.0" prefWidth="358.0" styleClass="pokemon-card-water" stylesheets="@../resources/styles.css">
+      <StackPane fx:id="stpBlastoise" layoutX="783.0" layoutY="500.0" onMouseClicked="#selectCharizard" prefHeight="202.0" prefWidth="358.0" styleClass="pokemon-card-water" stylesheets="@../resources/styles.css">
          <children>
-            <Label fx:id="lblSwampert" alignment="BOTTOM_LEFT" contentDisplay="TOP" layoutX="50.0" layoutY="20.0" styleClass="pokemon-name" stylesheets="@../resources/styles.css" text="SWAMPERT" translateX="-70.0" translateY="-70.0" StackPane.alignment="CENTER">
+            <Label fx:id="lblBlastoise" alignment="BOTTOM_LEFT" contentDisplay="TOP" layoutX="50.0" layoutY="20.0" styleClass="pokemon-name" stylesheets="@../resources/styles.css" text="BLASTOISE" translateX="-70.0" translateY="-70.0" StackPane.alignment="CENTER">
                <font>
                   <Font name="Showcard Gothic" size="12.0" />
                </font>
@@ -366,9 +366,9 @@
                   <String fx:value="bar" />
                </styleClass>
             </ProgressBar>
-            <ImageView fx:id="imgSwampert" fitHeight="153.0" fitWidth="135.0" pickOnBounds="true" StackPane.alignment="CENTER_RIGHT">
+            <ImageView fx:id="imgBlastoise" fitHeight="153.0" fitWidth="135.0" pickOnBounds="true" StackPane.alignment="CENTER_RIGHT">
                <image>
-                  <Image url="@../resources/swampert.png" />
+                  <Image url="@../resources/blastoise.png" />
                </image>
                <styleClass>
                   <String fx:value="water-image" />
@@ -564,6 +564,114 @@
                </styleClass>
             </Label>
             <Label fx:id="lblVida31" alignment="BOTTOM_LEFT" stylesheets="@../resources/styles.css" text="VIDA:  150HP" translateX="-70.0" translateY="80.0">
+               <styleClass>
+                  <String fx:value="hp-value-normal" />
+                  <String fx:value="stat-value" />
+               </styleClass>
+            </Label>
+         </children>
+      </StackPane>
+      <StackPane fx:id="stpMewto" layoutX="783.0" layoutY="48.0" onMouseClicked="#selectCharizard" prefHeight="202.0" prefWidth="358.0" styleClass="pokemon-card-normal" stylesheets="@../resources/styles.css">
+         <children>
+            <Label fx:id="lblMewto" alignment="BOTTOM_LEFT" contentDisplay="TOP" layoutX="50.0" layoutY="20.0" styleClass="pokemon-name" stylesheets="@../resources/styles.css" text="MEWTO" translateX="-70.0" translateY="-70.0" StackPane.alignment="CENTER">
+               <font>
+                  <Font name="Showcard Gothic" size="12.0" />
+               </font>
+            </Label>
+            <ProgressBar fx:id="barVida311" prefWidth="229.0" progress="1.0" stylesheets="@../resources/styles.css" translateX="-70.0" translateY="50.0">
+               <styleClass>
+                  <String fx:value="progress-bar-normal" />
+                  <String fx:value="bar" />
+               </styleClass>
+            </ProgressBar>
+            <ImageView fx:id="imgMewto" fitHeight="153.0" fitWidth="135.0" pickOnBounds="true" StackPane.alignment="CENTER_RIGHT">
+               <image>
+                  <Image url="@../resources/mewto.png" />
+               </image>
+               <styleClass>
+                  <String fx:value="pokemon-image" />
+                  <String fx:value="normal-image" />
+               </styleClass>
+            </ImageView>
+            <Label fx:id="lblAtaque311" alignment="BOTTOM_LEFT" stylesheets="@../resources/styles.css" text="ATA:  50HP" translateX="-125.0" translateY="-20.0">
+               <styleClass>
+                  <String fx:value="attack-value-normal" />
+                  <String fx:value="stat-value" />
+               </styleClass>
+            </Label>
+            <Label fx:id="lblDefensa311" alignment="BOTTOM_LEFT" stylesheets="@../resources/styles.css" text="DEF:  35HP" translateX="-125.0" translateY="20.0">
+               <styleClass>
+                  <String fx:value="defense-value-normal" />
+                  <String fx:value="stat-value" />
+               </styleClass>
+            </Label>
+            <Label fx:id="lblAtaqueEspecial311" alignment="BOTTOM_LEFT" stylesheets="@../resources/styles.css" text="AESP:  70HP" translateX="-22.0" translateY="-20.0">
+               <styleClass>
+                  <String fx:value="special-attack-value-normal" />
+                  <String fx:value="stat-value" />
+               </styleClass>
+            </Label>
+            <Label fx:id="lblDefensaEspecial311" alignment="BOTTOM_LEFT" stylesheets="@../resources/styles.css" text="DESP:  60HP" translateX="-22.0" translateY="20.0">
+               <styleClass>
+                  <String fx:value="special-defense-value-normal" />
+                  <String fx:value="stat-value" />
+               </styleClass>
+            </Label>
+            <Label fx:id="lblVida311" alignment="BOTTOM_LEFT" stylesheets="@../resources/styles.css" text="VIDA:  150HP" translateX="-70.0" translateY="80.0">
+               <styleClass>
+                  <String fx:value="hp-value-normal" />
+                  <String fx:value="stat-value" />
+               </styleClass>
+            </Label>
+         </children>
+      </StackPane>
+      <StackPane fx:id="stpBulbasaur" layoutX="1163.0" layoutY="48.0" onMouseClicked="#selectCharizard" prefHeight="202.0" prefWidth="358.0" styleClass="pokemon-card-normal" stylesheets="@../resources/styles.css">
+         <children>
+            <Label fx:id="lblBulbasaur" alignment="BOTTOM_LEFT" contentDisplay="TOP" layoutX="50.0" layoutY="20.0" styleClass="pokemon-name" stylesheets="@../resources/styles.css" text="bulbasaur" translateX="-70.0" translateY="-70.0" StackPane.alignment="CENTER">
+               <font>
+                  <Font name="Showcard Gothic" size="12.0" />
+               </font>
+            </Label>
+            <ProgressBar fx:id="barVida3111" prefWidth="229.0" progress="1.0" stylesheets="@../resources/styles.css" translateX="-70.0" translateY="50.0">
+               <styleClass>
+                  <String fx:value="progress-bar-normal" />
+                  <String fx:value="bar" />
+               </styleClass>
+            </ProgressBar>
+            <ImageView fx:id="imgBulbasaur" fitHeight="153.0" fitWidth="135.0" pickOnBounds="true" StackPane.alignment="CENTER_RIGHT">
+               <image>
+                  <Image url="@../resources/bulbasaur.png" />
+               </image>
+               <styleClass>
+                  <String fx:value="pokemon-image" />
+                  <String fx:value="normal-image" />
+               </styleClass>
+            </ImageView>
+            <Label fx:id="lblAtaque3111" alignment="BOTTOM_LEFT" stylesheets="@../resources/styles.css" text="ATA:  50HP" translateX="-125.0" translateY="-20.0">
+               <styleClass>
+                  <String fx:value="attack-value-normal" />
+                  <String fx:value="stat-value" />
+               </styleClass>
+            </Label>
+            <Label fx:id="lblDefensa3111" alignment="BOTTOM_LEFT" stylesheets="@../resources/styles.css" text="DEF:  35HP" translateX="-125.0" translateY="20.0">
+               <styleClass>
+                  <String fx:value="defense-value-normal" />
+                  <String fx:value="stat-value" />
+               </styleClass>
+            </Label>
+            <Label fx:id="lblAtaqueEspecial3111" alignment="BOTTOM_LEFT" stylesheets="@../resources/styles.css" text="AESP:  70HP" translateX="-22.0" translateY="-20.0">
+               <styleClass>
+                  <String fx:value="special-attack-value-normal" />
+                  <String fx:value="stat-value" />
+               </styleClass>
+            </Label>
+            <Label fx:id="lblDefensaEspecial3111" alignment="BOTTOM_LEFT" stylesheets="@../resources/styles.css" text="DESP:  60HP" translateX="-22.0" translateY="20.0">
+               <styleClass>
+                  <String fx:value="special-defense-value-normal" />
+                  <String fx:value="stat-value" />
+               </styleClass>
+            </Label>
+            <Label fx:id="lblVida3111" alignment="BOTTOM_LEFT" stylesheets="@../resources/styles.css" text="VIDA:  150HP" translateX="-70.0" translateY="80.0">
                <styleClass>
                   <String fx:value="hp-value-normal" />
                   <String fx:value="stat-value" />

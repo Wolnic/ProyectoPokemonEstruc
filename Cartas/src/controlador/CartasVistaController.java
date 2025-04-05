@@ -135,13 +135,7 @@ public class CartasVistaController implements Initializable {
     @FXML
     private Label lblVida21;
     @FXML
-    private StackPane stpSwampert;
-    @FXML
-    private Label lblSwampert;
-    @FXML
     private ProgressBar barVida211;
-    @FXML
-    private ImageView imgSwampert;
     @FXML
     private Label lblAtaque211;
     @FXML
@@ -206,6 +200,48 @@ public class CartasVistaController implements Initializable {
     private StackPane stpStaraptor;
     @FXML
     private ImageView imgStaraptor;
+    @FXML
+    private StackPane stpMewto;
+    @FXML
+    private Label lblMewto;
+    @FXML
+    private ProgressBar barVida311;
+    @FXML
+    private ImageView imgMewto;
+    @FXML
+    private Label lblAtaque311;
+    @FXML
+    private Label lblDefensa311;
+    @FXML
+    private Label lblAtaqueEspecial311;
+    @FXML
+    private Label lblDefensaEspecial311;
+    @FXML
+    private Label lblVida311;
+    @FXML
+    private StackPane stpBlastoise;
+    @FXML
+    private Label lblBlastoise;
+    @FXML
+    private ImageView imgBlastoise;
+    @FXML
+    private StackPane stpBulbasaur;
+    @FXML
+    private Label lblBulbasaur;
+    @FXML
+    private ProgressBar barVida3111;
+    @FXML
+    private ImageView imgBulbasaur;
+    @FXML
+    private Label lblAtaque3111;
+    @FXML
+    private Label lblDefensa3111;
+    @FXML
+    private Label lblAtaqueEspecial3111;
+    @FXML
+    private Label lblDefensaEspecial3111;
+    @FXML
+    private Label lblVida3111;
 
     /**
      * Initializes the controller class.
