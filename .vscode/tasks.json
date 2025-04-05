@@ -1,0 +1,19 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+	  {
+		"label": "Abrir con Scene Builder",
+		"type": "shell",
+		"command": "C:\\Users\\gjche\\AppData\\Local\\SceneBuilder\\SceneBuilder.exe",
+		"args": [
+		  "${file}"
+		],
+		"group": {
+		  "kind": "build",
+		  "isDefault": true
+		},
+		"problemMatcher": []
+	  }
+	]
+  }
+  
