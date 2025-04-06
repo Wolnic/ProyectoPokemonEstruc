@@ -3,15 +3,12 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/carlo/Documents/GitHub/ProyectoPokemonEstruc/Cartas/src/controlador/CartasVistaController.java</file>
-            <file>file:/C:/Users/carlo/Documents/GitHub/ProyectoPokemonEstruc/Cartas/src/controlador/Main.java</file>
-            <file>file:/C:/Users/carlo/Documents/GitHub/ProyectoPokemonEstruc/Cartas/src/resources/rutas_para_HavaFX</file>
-            <file>file:/C:/Users/carlo/Documents/GitHub/ProyectoPokemonEstruc/Cartas/src/vista/CartasVista.fxml</file>
-            <file>file:/C:/Users/carlo/Documents/GitHub/ProyectoPokemonEstruc/Cartas/src/modelo/Pokemon.java</file>
-            <file>file:/C:/Users/carlo/Documents/GitHub/ProyectoPokemonEstruc/Cartas/src/modelo/NodoPokemon.java</file>
-            <file>file:/C:/Users/carlo/Documents/GitHub/ProyectoPokemonEstruc/Cartas/src/modelo/ListaPokemon.java</file>
-            <file>file:/C:/Users/carlo/Documents/GitHub/ProyectoPokemonEstruc/Cartas/src/modelo/Entrenador.java</file>
-            <file>file:/C:/Users/carlo/Documents/GitHub/ProyectoPokemonEstruc/Cartas/src/modelo/Pokedex.java</file>
+            <file>file:/C:/Users/gjche/Desktop/ProyectoPokemonEstruc/Cartas/src/controlador/Main.java</file>
+            <file>file:/C:/Users/gjche/Desktop/ProyectoPokemonEstruc/Cartas/src/controlador/CartasVistaController.java</file>
+            <file>file:/C:/Users/gjche/Desktop/ProyectoPokemonEstruc/Cartas/src/resources/rutas_para_HavaFX</file>
+            <file>file:/C:/Users/gjche/Desktop/ProyectoPokemonEstruc/Cartas/src/resources/iniciojuego.css</file>
+            <file>file:/C:/Users/gjche/Desktop/ProyectoPokemonEstruc/Cartas/src/controlador/InicioJuegoController.java</file>
+            <file>file:/C:/Users/gjche/Desktop/ProyectoPokemonEstruc/Cartas/src/vista/CartasVista.fxml</file>
         </group>
     </open-files>
 </project-private>

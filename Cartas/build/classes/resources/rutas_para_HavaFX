@@ -1,2 +1,12 @@
+Cada que se trabaja despues de otro compañero al agregarlo en netbeans hay que seguir varios pasos
+
+En el proyecto, click derecho y properties
+
+En libraries, classpath darle al +, añadir la libreria de javafx que se instalo
+
+En run, modificar solamente la ruta que esta entre " ", por la ruta donde esta la carpeta de lib, en la carpeta de javafx
+
+Rutas de usuarios:
 // ruta Manu C:\Users\Manu\Downloads\openjfx-24_windows-x64_bin-sdk\javafx-sdk-24\lib
 // ruta Carlos C:\Users\carlo\Downloads\javafx-sdk-24\lib
+// ruta Josue C:\Users\gjche\Downloads\openjfx-24_windows-x64_bin-sdk\javafx-sdk-24\lib

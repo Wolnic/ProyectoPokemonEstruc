@@ -8,9 +8,11 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ProgressBar;
+import javafx.scene.control.ScrollPane;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.StackPane;
 
 /**
@@ -244,6 +246,10 @@ public class CartasVistaController implements Initializable {
     private Label lblTitulo;
     @FXML
     private Button btnAgregarPokemon;
+    @FXML
+    private ScrollPane scrPokedex;
+    @FXML
+    private FlowPane fwlPokedex;
 
     /**
      * Initializes the controller class.
