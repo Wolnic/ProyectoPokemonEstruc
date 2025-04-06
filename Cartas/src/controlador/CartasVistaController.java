@@ -248,8 +248,6 @@ public class CartasVistaController implements Initializable {
     private Button btnAgregarPokemon;
     @FXML
     private ScrollPane scrPokedex;
-    @FXML
-    private FlowPane fwlPokedex;
 
     /**
      * Initializes the controller class.
