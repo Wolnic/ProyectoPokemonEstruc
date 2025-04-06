@@ -17,7 +17,7 @@
 .pokemon-card-normal:hover {
     -fx-scale-x: 1.05;
     -fx-scale-y: 1.05;
-    -fx-effect: dropshadow(gaussian, rgba(254, 254, 254, 0.76), 15, 0.5, 0, 0);
+    -fx-effect: dropshadow(gaussian, rgb(254, 254, 254), 15, 0.5, 0, 0);
 }
 
 /*estilo tipo de carta*/
@@ -37,7 +37,7 @@
 .pokemon-card-fire:hover {
     -fx-scale-x: 1.05;
     -fx-scale-y: 1.05;
-    -fx-effect: dropshadow(gaussian, rgba(255, 215, 0, 0.6), 15, 0.5, 0, 0);
+    -fx-effect: dropshadow(gaussian, rgb(255, 217, 0), 15, 0.5, 0, 0);
 }
 
 /*estilo tipo de carta*/
@@ -76,22 +76,22 @@
 }
 
 .fire-image {
-    -fx-effect: dropshadow(gaussian, rgba(255, 215, 0, 0.6), 15, 0.5, 0, 0);
-    -fx-border-color: #F08030;
+    -fx-effect: dropshadow(gaussian, rgb(255, 217, 0), 15, 0.5, 0, 0);
+    -fx-border-color: #fffb00;
     -fx-border-width: 3px;
     -fx-border-radius: 10px;
 }
 
 .water-image {
     -fx-effect: dropshadow(gaussian, rgba(194, 0, 255, 0.76), 15, 0.5, 0, 0);
-    -fx-border-color: #6890F0;
+    -fx-border-color: #62cdff;
     -fx-border-width: 3px;
     -fx-border-radius: 10px;
 }
 
 .normal-image {
-    -fx-effect: dropshadow(gaussian, rgba(254, 254, 254, 0.76), 15, 0.5, 0, 0);
-    -fx-border-color: #c7c4c7;
+    -fx-effect: dropshadow(gaussian, rgb(255, 255, 255), 15, 0.5, 0, 0);
+    -fx-border-color: #ffffff;
     -fx-border-width: 4px;
     -fx-border-radius: 10px;
 }
