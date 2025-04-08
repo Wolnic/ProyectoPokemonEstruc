@@ -232,7 +232,7 @@
 
 .pokemon-title {
     -fx-font-family:"Showcard Gothic";
-    -fx-font-size: 60px;
+    -fx-font-size: 70px;
     -fx-text-fill: #FFD700; /* Dorado estilo Pikachu */
     -fx-effect: dropshadow(gaussian, black, 5, 0.7, 3, 3);
     -fx-stroke: #6f6b6b; /* Contorno oscuro */
