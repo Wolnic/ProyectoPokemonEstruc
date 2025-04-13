@@ -241,3 +241,25 @@
     -fx-background-radius: 5px;
     -fx-alignment: center;
 }
+
+.transparent-button {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+   -fx-font-family:"Showcard Gothic";
+    -fx-font-size: 26px;
+    -fx-text-fill: #FFD700; /* Dorado estilo Pikachu */
+    -fx-effect: dropshadow(gaussian, black, 5, 0.7, 3, 3);
+    -fx-stroke: #6f6b6b; /* Contorno oscuro */
+}
+
+.pokemon-title-seleccionado {
+    -fx-font-family:"Showcard Gothic";
+    -fx-font-size: 30px;
+    -fx-text-fill: #FFD700; /* Dorado estilo Pikachu */
+    -fx-effect: dropshadow(gaussian, black, 5, 0.7, 3, 3);
+    -fx-stroke: #6f6b6b; /* Contorno oscuro */
+    -fx-stroke-width: 2px;
+    -fx-padding: 5px;
+    -fx-background-radius: 5px;
+    -fx-alignment: center;
+}

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.Pane?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="468.0" prefWidth="842.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vista.TorneoVistaController">
+    <children>
+        <Label fx:id="lblP1" layoutX="50" layoutY="30" text="Jugador 1"/>
+        <Label fx:id="lblP2" layoutX="50" layoutY="70" text="Jugador 2"/>
+        <Label fx:id="lblR1_1" layoutX="150" layoutY="50" text="Ganador R1"/>
+
+        <Line startX="100" startY="40" endX="150" endY="55"/>
+        <Line startX="100" startY="80" endX="150" endY="55"/>
+
+        <!-- Repite para el resto de participantes y nodos -->
+
+        <Label fx:id="lblCampeon" layoutX="400" layoutY="250" text="CAMPEÓN"/>
+        <Button fx:id="btnSiguiente" layoutX="350" layoutY="400" text="Siguiente Ronda"/>
+    </children>
+</Pane>

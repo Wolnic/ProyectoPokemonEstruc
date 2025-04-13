@@ -212,13 +212,9 @@ public class CartasVistaController implements Initializable {
     @FXML
     private ImageView imgStaraptor;
     @FXML
-    private StackPane stpMewto;
-    @FXML
-    private Label lblMewto;
+    private StackPane stpMewtwo;
     @FXML
     private ProgressBar barVida311;
-    @FXML
-    private ImageView imgMewto;
     @FXML
     private Label lblAtaque311;
     @FXML
@@ -279,6 +275,12 @@ public class CartasVistaController implements Initializable {
     private Label lblPokemonSeleccionado;
 
     private HashMap<String, String> rutaCartas;
+    @FXML
+    private Label lblMewtwo;
+    @FXML
+    private ImageView imgMewtwo;
+    @FXML
+    private Button btnIniciarTorneo;
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -298,11 +300,11 @@ public class CartasVistaController implements Initializable {
         rutaCartas.put("Blastoise", "/resources/cartaBlastoise.png");
         rutaCartas.put("Bulbasaur", "/resources/cartaBulbasaur.png");
         rutaCartas.put("Snorlax", "/resources/cartaSnorlax.png");
-        rutaCartas.put("Mewto", "/resources/cartaMewto.png");
+        rutaCartas.put("Mewtwo", "/resources/cartaMewtwo.png");
 
         StackPane[] cartas = {
             stpSnorlax, stpCharizard, stpGreninja, stpStaraptor,
-            stpBlaziken, stpEmpoleon, stpMewto, stpVolcarona,
+            stpBlaziken, stpEmpoleon, stpMewtwo, stpVolcarona,
             stpBlastoise, stpBulbasaur, stpArcanine, stpCloyster
         };
 
@@ -413,7 +415,7 @@ public class CartasVistaController implements Initializable {
             return "Bulbasaur";
         } else if (carta == stpSnorlax) {
             return "Snorlax";
-        } else if (carta == stpMewto) {
+        } else if (carta == stpMewtwo) {
             return "Mewtwo";
         }
         return "Desconocido";  // En caso de que no se encuentre la carta
@@ -486,8 +488,8 @@ public class CartasVistaController implements Initializable {
     }
 
     @FXML
-    private void selectMewto(MouseEvent event) {
-        seleccionarCarta(stpMewto);
+    private void selectMewtwo(MouseEvent event) {
+        seleccionarCarta(stpMewtwo);
     }
 
     @FXML
@@ -558,5 +560,10 @@ public class CartasVistaController implements Initializable {
             e.printStackTrace();
         }
     }
+
+    @FXML
+    private void IniciarTorneo(ActionEvent event) {
+    }
+
 
 }

@@ -7,11 +7,21 @@ import javafx.fxml.Initializable;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.control.Alert;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.input.MouseEvent;
+import javafx.stage.Stage;
 
 public class PokemonSeleccionadoController implements Initializable {
 
     @FXML
     private ImageView imgCarta; // Asegúrate de que tengas un ImageView para mostrar la carta.
+    @FXML
+    private ImageView imgFondoSeleccion;
+    @FXML
+    private Button btnVolver;
+    @FXML
+    private Label lblPokemonSelecc;
 
     // Método para mostrar la carta del Pokémon
     public void mostrarCarta(String rutaImagen) {
@@ -37,5 +47,11 @@ public class PokemonSeleccionadoController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // Inicialización adicional si fuera necesario en el futuro
+    }
+
+    @FXML
+    private void volver(MouseEvent event) {
+        Stage stage = (Stage) btnVolver.getScene().getWindow();
+    stage.close();
     }
 }

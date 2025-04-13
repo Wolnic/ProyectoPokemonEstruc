@@ -2,31 +2,25 @@ package modelo;
 
 /**
  *
- * @author  *
- * Ocampo Pantoja José Mario  *
- * Sánchez Venegas Manuel Antonio  *
- * Delgado Jiménez Alexander  *
- * Cordoba Hernandez Giovanny Josue  *
- * Pérez Rodríguez Carlos Roberto  *
+ * @author * Ocampo Pantoja José Mario * Sánchez Venegas Manuel Antonio *
+ * Delgado Jiménez Alexander * Cordoba Hernandez Giovanny Josue * Pérez
+ * Rodríguez Carlos Roberto *
  */
 public class Entrenador {
-    private String Nombre;
-    private ListaPokemon ListaPokemon;
-    
-    public void CrearEntrenador(String Nombre,ListaPokemon Lista){
-        this.Nombre=Nombre;
-        this.ListaPokemon=Lista;
+
+    private String nombre;
+    private boolean esUsuario;
+
+    public Entrenador(String nombre, boolean esUsuario) {
+        this.nombre = nombre;
+        this.esUsuario = esUsuario;
     }
-    
-    public void SeleccionarPokemon(){
-        ListaPokemon.MostrarLista();
+
+    public String getNombre() {
+        return nombre;
     }
-    
-    public void CambiarPokemon(){
-        
-    }
-    
-    public void Atacar(Pokemon Enemigo){
-        
+
+    public boolean esUsuario() {
+        return esUsuario;
     }
 }
