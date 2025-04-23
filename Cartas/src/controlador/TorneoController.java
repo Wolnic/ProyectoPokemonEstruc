@@ -27,6 +27,28 @@ public class TorneoController implements Initializable {
 
     @FXML private Label lblP1, lblP2, lblP3, lblP4; // Continuar hasta lblP18
     @FXML private Button btnSiguiente;
+    @FXML
+    private Label lblP5;
+    @FXML
+    private Label lblP6;
+    @FXML
+    private Label lblP7;
+    @FXML
+    private Label lblP8;
+    @FXML
+    private Label lblCampeon;
+    @FXML
+    private Label lblR1_1;
+    @FXML
+    private Label lblR1_2;
+    @FXML
+    private Label lblFinalistaL;
+    @FXML
+    private Label lblR1_3;
+    @FXML
+    private Label lblR1_4;
+    @FXML
+    private Label lblFinalistaR;
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
