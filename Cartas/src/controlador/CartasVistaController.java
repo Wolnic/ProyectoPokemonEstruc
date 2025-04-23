@@ -565,5 +565,4 @@ public class CartasVistaController implements Initializable {
     private void IniciarTorneo(ActionEvent event) {
     }
 
-
 }

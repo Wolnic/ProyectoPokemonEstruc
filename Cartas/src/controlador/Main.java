@@ -2,6 +2,7 @@
 package controlador;
 
 
+import java.awt.geom.Rectangle2D;
 import java.io.IOException;
 import javafx.application.Application;
 import static javafx.application.Application.launch;
@@ -10,6 +11,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.layout.Pane;
+import javafx.stage.Screen;
 import javafx.stage.Stage;
 
 public class Main extends Application {
@@ -21,10 +23,10 @@ public class Main extends Application {
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(Main.class.getResource("/vista/CartasVista.fxml"));
             ScrollPane ventana = (ScrollPane)loader.load();
-            
+
             Scene scene = new Scene(ventana);
             primaryStage.setScene(scene);
-            primaryStage.setResizable(false);
+            primaryStage.setResizable(true);
             primaryStage.show();
         } catch (IOException e) {
         }

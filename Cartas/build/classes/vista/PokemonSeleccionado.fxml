@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="904.0" prefWidth="557.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.PokemonSeleccionadoController">
+   <children>
+      <ImageView fx:id="imgFondoSeleccion" fitHeight="904.0" fitWidth="774.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resources/pokedex.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imgCarta" fitHeight="231.0" fitWidth="377.0" layoutX="94.0" layoutY="392.0" pickOnBounds="true" preserveRatio="true" />
+      <Button fx:id="btnVolver" layoutX="152.0" layoutY="776.0" mnemonicParsing="false" onMouseClicked="#volver" prefHeight="50.0" prefWidth="260.0" styleClass="transparent-button" stylesheets="@../resources/styles.css" text="VOLVER">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </Button>
+      <Label fx:id="lblPokemonSelecc" layoutX="96.0" layoutY="232.0" styleClass="pokemon-title-seleccionado" stylesheets="@../resources/styles.css" text="POKEMON SELECCIONADO" />
+   </children>
+</AnchorPane>
