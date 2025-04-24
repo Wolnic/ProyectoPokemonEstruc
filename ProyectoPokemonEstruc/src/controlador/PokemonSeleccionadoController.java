@@ -24,25 +24,23 @@ public class PokemonSeleccionadoController implements Initializable {
     private Label lblPokemonSelecc;
 
     // Método para mostrar la carta del Pokémon
-    public void mostrarCarta(String rutaImagen) {
-        try {
-            // Validar que la ruta de la imagen no sea nula o vacía
-            if (rutaImagen == null || rutaImagen.isEmpty()) {
-                throw new IllegalArgumentException("La ruta de la imagen no puede ser nula o vacía.");
-            }
-            
-            // Intentar cargar la imagen desde la ruta proporcionada
-            Image image = new Image(getClass().getResource(rutaImagen).toString());
-            imgCarta.setImage(image);
-        } catch (Exception e) {
-            // Mostrar un alerta si ocurre un error al cargar la imagen
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setTitle("Error de Carga de Imagen");
-            alert.setHeaderText(null);
-            alert.setContentText("No se pudo cargar la imagen: " + e.getMessage());
-            alert.showAndWait();
+    public void mostrarCarta(String rutaImagen, String nombre) {
+    try {
+        if (rutaImagen == null || rutaImagen.isEmpty()) {
+            throw new IllegalArgumentException("La ruta de la imagen no puede ser nula o vacía.");
         }
+
+        Image image = new Image(getClass().getResource(rutaImagen).toString());
+        imgCarta.setImage(image);
+        lblPokemonSelecc.setText("Has seleccionado a: " + nombre);
+    } catch (Exception e) {
+        Alert alert = new Alert(Alert.AlertType.ERROR);
+        alert.setTitle("Error de Carga de Imagen");
+        alert.setHeaderText(null);
+        alert.setContentText("No se pudo cargar la imagen: " + e.getMessage());
+        alert.showAndWait();
     }
+}
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {

@@ -541,7 +541,7 @@ public class CartasVistaController implements Initializable {
             PokemonSeleccionadoController SeleccionController = loader.getController();
 
             // Mostrar la carta del Pokémon, pasándole el nombre del archivo de la carta
-            SeleccionController.mostrarCarta(rutaImagen);
+            SeleccionController.mostrarCarta(rutaImagen, nombrePokemon);
 
             // Crear y mostrar la nueva escena
             Stage stage = new Stage();

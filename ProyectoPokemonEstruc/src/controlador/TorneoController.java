@@ -17,6 +17,8 @@ import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
+import modelo.ListaPokemon;
+import modelo.Pokemon;
 
 /**
  * FXML Controller class
@@ -65,33 +67,86 @@ public class TorneoController implements Initializable {
     private Label lblSemi4;
     @FXML
     private Label lblFinal1;
+    
+    private ListaPokemon equipoJugador;
+    private int rondaActual = 1;
 
     /**
      * Initializes the controller class.
      */
-    @Override
+     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
-    }    
+        equipoJugador = new ListaPokemon();
+    }
+
+    public void recibirPokemones(Pokemon[] pokemones) {
+    for (Pokemon p : pokemones) {
+        if (p != null) {
+            equipoJugador.agregarPokemon(p);
+        }
+    }
+    actualizarVistaTorneo();
+}
+
+    private void actualizarVistaTorneo() {
+        if (equipoJugador.getCantidad() >= 4) {
+            lblP1.setText(equipoJugador.obtenerPokemon(0).getNombre());
+            lblP2.setText(equipoJugador.obtenerPokemon(1).getNombre());
+            lblP3.setText(equipoJugador.obtenerPokemon(2).getNombre());
+            lblP4.setText(equipoJugador.obtenerPokemon(3).getNombre());
+            lblP5.setText("CPU1");
+            lblP6.setText("CPU2");
+            lblP7.setText("CPU3");
+            lblP8.setText("CPU4");
+        }
+    }
 
     @FXML
     private void JugarRonda(MouseEvent event) {
-        try {
-        // Cargar el archivo FXML desde la carpeta vista
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/BatallaPokemon.fxml"));
-        Parent root = loader.load();
+        switch (rondaActual) {
+            case 1:
+                lblSemi1.setText(lblP1.getText());
+                lblSemi2.setText(lblP3.getText());
+                lblSemi3.setText(lblP5.getText());
+                lblSemi4.setText(lblP7.getText());
+                break;
+            case 2:
+                lblFinal1.setText(lblSemi1.getText());
+                lblFinal2.setText(lblSemi3.getText());
+                break;
+            case 3:
+                lblGanador.setText(lblFinal1.getText());
+                break;
+        }
+        rondaActual++;
 
-        // Obtener el escenario actual desde el evento
-        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        
-        // Cambiar la escena
-        Scene scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
-        
-    } catch (Exception e) {
-        e.printStackTrace();
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/BatallaPokemon.fxml"));
+            Parent root = loader.load();
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            Scene scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
+
+    private Pokemon crearPokemonPorNombre(String nombre) {
+        switch (nombre) {
+            case "Charizard": return new Pokemon("Charizard", "Fuego", 1);
+            case "Blaziken": return new Pokemon("Blaziken", "Fuego", 2);
+            case "Volcarona": return new Pokemon("Volcarona", "Fuego", 3);
+            case "Greninja": return new Pokemon("Greninja", "Agua", 4);
+            case "Empoleon": return new Pokemon("Empoleon", "Agua", 5);
+            case "Cloyster": return new Pokemon("Cloyster", "Agua", 6);
+            case "Snorlax": return new Pokemon("Snorlax", "Normal", 7);
+            case "Mewtwo": return new Pokemon("Mewtwo", "Psíquico", 8);
+            case "Staraptor": return new Pokemon("Staraptor", "Normal", 9);
+            case "Bulbasaur": return new Pokemon("Bulbasaur", "Planta", 10);
+            case "Arcanine": return new Pokemon("Arcanine", "Fuego", 11);
+            case "Blastoise": return new Pokemon("Blastoise", "Agua", 12);
+            default: return new Pokemon("Desconocido", "Normal", 99);
+        }
     }
-    
 }
