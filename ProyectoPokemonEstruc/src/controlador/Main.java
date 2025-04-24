@@ -22,7 +22,7 @@ public class Main extends Application {
     public void start(Stage primaryStage) {
         try {
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(Main.class.getResource("/vista/BatallaPokemon.fxml"));
+            loader.setLocation(Main.class.getResource("/vista/InicioJuego.fxml"));
             AnchorPane ventana = (AnchorPane) loader.load();
 
             Scene scene = new Scene(ventana);

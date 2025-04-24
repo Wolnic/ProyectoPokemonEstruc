@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import java.lang.String?>
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.image.Image?>
@@ -21,7 +22,7 @@
                 </ImageView>
                 <Label layoutX="216.0" layoutY="32.0" prefHeight="91.0" prefWidth="981.0" styleClass="pokemon-title" stylesheets="@../resources/styles.css" text="SELECCIONE SU ENTRENADOR" />
 
-                <StackPane fx:id="stpAsh" layoutX="28.0" layoutY="140.0" onMouseEntered="#showAshDetails" onMouseExited="#hideAshDetails" prefHeight="247.0" prefWidth="225.0">
+                <StackPane fx:id="stpAsh" layoutX="28.0" layoutY="140.0" onMouseClicked="#handleAshClick" onMouseEntered="#showAshDetails" onMouseExited="#hideAshDetails" prefHeight="247.0" prefWidth="225.0">
                     <children>
 
                         <ImageView fx:id="imgAsh" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" translateY="25.0">
@@ -50,7 +51,7 @@
                         <String fx:value="entrenador-card-ash" />
                     </styleClass>
                 </StackPane>
-                <StackPane fx:id="stpMisty" layoutX="300.0" layoutY="140.0" onMouseEntered="#showMistyDetails" onMouseExited="#hideMistyDetails" prefHeight="247.0" prefWidth="225.0">
+                <StackPane fx:id="stpMisty" layoutX="300.0" layoutY="140.0" onMouseClicked="#handleMistyClick" onMouseEntered="#showMistyDetails" onMouseExited="#hideMistyDetails" prefHeight="247.0" prefWidth="225.0">
                     <children>
                         <ImageView fx:id="imgMisty" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" translateY="25.0">
                             <image>
@@ -75,7 +76,7 @@
                         <String fx:value="entrenador-card-misty" />
                     </styleClass>
                 </StackPane>
-                <StackPane fx:id="stpBrock" layoutX="574.0" layoutY="140.0" onMouseEntered="#showBrockDetails" onMouseExited="#hideBrockDetails" prefHeight="247.0" prefWidth="225.0">
+                <StackPane fx:id="stpBrock" layoutX="574.0" layoutY="140.0" onMouseClicked="#handleBrockClick" onMouseEntered="#showBrockDetails" onMouseExited="#hideBrockDetails" prefHeight="247.0" prefWidth="225.0">
                     <children>
                         <ImageView fx:id="imgBrock" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" translateY="25.0">
                             <image>
@@ -99,7 +100,7 @@
                         <String fx:value="entrenador-card-brock" />
                     </styleClass>
                 </StackPane>
-                <StackPane fx:id="stpGary" layoutX="847.0" layoutY="140.0" onMouseEntered="#showGaryDetails" onMouseExited="#hideGaryDetails" prefHeight="247.0" prefWidth="225.0">
+                <StackPane fx:id="stpGary" layoutX="847.0" layoutY="140.0" onMouseClicked="#handleGaryClick" onMouseEntered="#showGaryDetails" onMouseExited="#hideGaryDetails" prefHeight="247.0" prefWidth="225.0">
                     <children>
                         <ImageView fx:id="imgGary" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" translateY="25.0">
                             <image>
@@ -123,7 +124,7 @@
                         <String fx:value="entrenador-card-gary" />
                     </styleClass>
                 </StackPane>
-                <StackPane fx:id="stpMay" layoutX="1118.0" layoutY="140.0" onMouseEntered="#showMayDetails" onMouseExited="#hideMayDetails" prefHeight="247.0" prefWidth="225.0">
+                <StackPane fx:id="stpMay" layoutX="1118.0" layoutY="140.0" onMouseClicked="#handleMayClick" onMouseEntered="#showMayDetails" onMouseExited="#hideMayDetails" prefHeight="247.0" prefWidth="225.0">
                     <children>
                         <ImageView fx:id="imgMay" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" translateY="25.0">
                             <image>
@@ -147,7 +148,7 @@
                         <String fx:value="entrenador-card-may" />
                     </styleClass>
                 </StackPane>
-                <StackPane fx:id="stpDawn" layoutX="27.0" layoutY="441.0" onMouseEntered="#showDawnDetails" onMouseExited="#hideDawnDetails" prefHeight="247.0" prefWidth="225.0">
+                <StackPane fx:id="stpDawn" layoutX="27.0" layoutY="441.0" onMouseClicked="#handleDawnClick" onMouseEntered="#showDawnDetails" onMouseExited="#hideDawnDetails" prefHeight="247.0" prefWidth="225.0">
                     <children>
                         <ImageView fx:id="imgDawn" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" translateY="25.0">
                             <image>
@@ -171,7 +172,7 @@
                         <String fx:value="entrenador-card-dawn" />
                     </styleClass>
                 </StackPane>
-                <StackPane fx:id="stpIris" layoutX="299.0" layoutY="441.0" onMouseEntered="#showIrisDetails" onMouseExited="#hideIrisDetails" prefHeight="247.0" prefWidth="225.0">
+                <StackPane fx:id="stpIris" layoutX="299.0" layoutY="441.0" onMouseClicked="#handleIrisClick" onMouseEntered="#showIrisDetails" onMouseExited="#hideIrisDetails" prefHeight="247.0" prefWidth="225.0">
                     <children>
                         <ImageView fx:id="imgIris" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" translateY="25.0">
                             <image>
@@ -195,7 +196,7 @@
                         <String fx:value="entrenador-card-iris" />
                     </styleClass>
                 </StackPane>
-                <StackPane fx:id="stpSerena" layoutX="573.0" layoutY="441.0" onMouseEntered="#showSerenaDetails" onMouseExited="#hideSerenaDetails" prefHeight="247.0" prefWidth="225.0">
+                <StackPane fx:id="stpSerena" layoutX="573.0" layoutY="441.0" onMouseClicked="#handleSerenaClick" onMouseEntered="#showSerenaDetails" onMouseExited="#hideSerenaDetails" prefHeight="247.0" prefWidth="225.0">
                     <children>
                         <ImageView fx:id="imgSerena" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" translateY="25.0">
                             <image>
@@ -219,7 +220,7 @@
                         <String fx:value="entrenador-card-serena" />
                     </styleClass>
                 </StackPane>
-                <StackPane fx:id="stpKiawe" layoutX="846.0" layoutY="441.0" onMouseEntered="#showKiaweDetails" onMouseExited="#hideKiaweDetails" prefHeight="247.0" prefWidth="225.0">
+                <StackPane fx:id="stpKiawe" layoutX="846.0" layoutY="441.0" onMouseClicked="#handleKiaweClick" onMouseEntered="#showKiaweDetails" onMouseExited="#hideKiaweDetails" prefHeight="247.0" prefWidth="225.0">
                     <children>
                         <ImageView fx:id="imgKiawe" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" translateY="25.0">
                             <image>
@@ -243,7 +244,7 @@
                         <String fx:value="entrenador-card-kiawe" />
                     </styleClass>
                 </StackPane>
-                <StackPane fx:id="stpGiovanni" layoutX="1117.0" layoutY="441.0" onMouseEntered="#showGiovanniDetails" onMouseExited="#hideGiovanniDetails" prefHeight="247.0" prefWidth="225.0">
+                <StackPane fx:id="stpGiovanni" layoutX="1117.0" layoutY="441.0" onMouseClicked="#handleGiovanniClick" onMouseEntered="#showGiovanniDetails" onMouseExited="#hideGiovanniDetails" prefHeight="247.0" prefWidth="225.0">
                     <children>
                         <ImageView fx:id="imgGiovanni" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" translateY="25.0">
                             <image>
@@ -267,7 +268,7 @@
                         <String fx:value="entrenador-card-giovanni" />
                     </styleClass>
                 </StackPane>
-
+            <Button layoutX="46.0" layoutY="54.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="132.0" text="Elegir Entrenador" onAction="#handleElegirEntrenador" />
             </children>
         </AnchorPane>
     </content>

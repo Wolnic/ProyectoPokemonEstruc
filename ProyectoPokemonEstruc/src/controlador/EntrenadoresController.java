@@ -6,14 +6,22 @@ package controlador;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.StackPane;
+import javafx.stage.Stage;
 
 /**
  * FXML Controller class
@@ -215,4 +223,93 @@ public class EntrenadoresController implements Initializable {
         anpGiovanniDetails.setVisible(true);
     }
 
+  private String entrenadorSeleccionado;
+
+    @FXML
+    private void handleAshClick(MouseEvent event) {
+        entrenadorSeleccionado = "Ash";
+        mostrarMensaje("Seleccionaste a Ash");
+    }
+
+    @FXML
+    private void handleMistyClick(MouseEvent event) {
+        entrenadorSeleccionado = "Misty";
+        mostrarMensaje("Seleccionaste a Misty");
+    }
+
+    @FXML
+    private void handleBrockClick(MouseEvent event) {
+        entrenadorSeleccionado = "Brock";
+        mostrarMensaje("Seleccionaste a Brock");
+    }
+
+    @FXML
+    private void handleGaryClick(MouseEvent event) {
+        entrenadorSeleccionado = "Gary";
+        mostrarMensaje("Seleccionaste a Gary");
+    }
+
+    @FXML
+    private void handleMayClick(MouseEvent event) {
+        entrenadorSeleccionado = "May";
+        mostrarMensaje("Seleccionaste a May");
+    }
+
+    @FXML
+    private void handleDawnClick(MouseEvent event) {
+        entrenadorSeleccionado = "Dawn";
+        mostrarMensaje("Seleccionaste a Dawn");
+    }
+
+    @FXML
+    private void handleIrisClick(MouseEvent event) {
+        entrenadorSeleccionado = "Iris";
+        mostrarMensaje("Seleccionaste a Iris");
+    }
+
+    @FXML
+    private void handleSerenaClick(MouseEvent event) {
+        entrenadorSeleccionado = "Serena";
+        mostrarMensaje("Seleccionaste a Serena");
+    }
+
+    @FXML
+    private void handleKiaweClick(MouseEvent event) {
+        entrenadorSeleccionado = "Kiawe";
+        mostrarMensaje("Seleccionaste a Kiawe");
+    }
+
+    @FXML
+    private void handleGiovanniClick(MouseEvent event) {
+        entrenadorSeleccionado = "Giovanni";
+        mostrarMensaje("Seleccionaste a Giovanni");
+    }
+
+
+    private void mostrarMensaje(String mensaje) {
+        Alert alert = new Alert(AlertType.INFORMATION, mensaje, ButtonType.OK);
+        alert.setTitle("Selección de Entrenador");
+        alert.setHeaderText(null);  // No necesitamos encabezado
+        alert.showAndWait();
+    }
+
+    @FXML
+    private void handleElegirEntrenador(ActionEvent event) {
+        if (entrenadorSeleccionado != null) {
+            // Abrir CartasVista.fxml
+            try {
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/CartasVista.fxml"));
+                Parent root = loader.load();
+                Stage stage = new Stage();
+                stage.setScene(new Scene(root));
+                stage.setTitle("Vista del Pokémon");
+                stage.show();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        } else {
+            mostrarMensaje("No se ha seleccionado ningún entrenador.");
+        }
+    }
 }
+

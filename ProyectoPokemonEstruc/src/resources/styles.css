@@ -417,3 +417,10 @@
     -fx-font-size: 10px;
     -fx-font-family: "Showcard Gothic";
 }
+
+.entrenador-seleccionado {
+    -fx-border-color: gold;
+    -fx-border-width: 4px;
+    -fx-border-radius: 10px;
+    -fx-background-color: rgba(255, 255, 255, 0.3);
+}
