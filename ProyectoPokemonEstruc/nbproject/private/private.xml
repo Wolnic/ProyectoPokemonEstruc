@@ -2,6 +2,18 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+<<<<<<< Updated upstream
         <group/>
+=======
+        <group>
+            <file>file:/C:/Users/Empanadita/Desktop/ProyectoPokemonEstruc/ProyectoPokemonEstruc/src/controlador/InicioJuegoController.java</file>
+            <file>file:/C:/Users/Empanadita/Desktop/ProyectoPokemonEstruc/ProyectoPokemonEstruc/src/controlador/Main.java</file>
+            <file>file:/C:/Users/Empanadita/Desktop/ProyectoPokemonEstruc/ProyectoPokemonEstruc/src/controlador/EntrenadoresController.java</file>
+            <file>file:/C:/Users/Empanadita/Desktop/ProyectoPokemonEstruc/ProyectoPokemonEstruc/src/resources/styles.css</file>
+            <file>file:/C:/Users/Empanadita/Desktop/ProyectoPokemonEstruc/ProyectoPokemonEstruc/src/controlador/CartasVistaController.java</file>
+            <file>file:/C:/Users/Empanadita/Desktop/ProyectoPokemonEstruc/ProyectoPokemonEstruc/src/vista/Entrenadores.fxml</file>
+            <file>file:/C:/Users/Empanadita/Desktop/ProyectoPokemonEstruc/ProyectoPokemonEstruc/src/controlador/TorneoController.java</file>
+        </group>
+>>>>>>> Stashed changes
     </open-files>
 </project-private>
