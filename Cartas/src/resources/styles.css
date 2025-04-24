@@ -321,3 +321,97 @@
     -fx-border-width: 3px;
     -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 12, 0.3, 4, 4);
 }
+/* Estilo base para todas las cartas de los entrenadores */
+.entrenador-card {
+    -fx-background-radius: 15px;
+    -fx-padding: 20px;
+    -fx-border-radius: 15px;
+    -fx-border-color: rgba(149, 141, 143, 0.2);
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 10, 0.5, 2, 2);
+    -fx-transition: all 0.3s ease-in-out;
+}
+
+/* Fondo de la carta para Ash (tipo rojo y blanco, colores típicos de su vestimenta) */
+.entrenador-card-ash {
+    -fx-background-color: linear-gradient(to bottom, #ff0000, #ffffff); /* Rojo a blanco */
+}
+
+/* Fondo de la carta para Misty (agua, tonos azules) */
+.entrenador-card-misty {
+    -fx-background-color: linear-gradient(to bottom, #00bfff, #1e90ff); /* Azul claro a azul */
+}
+
+/* Fondo de la carta para Brock (rocoso, tonos marrones) */
+.entrenador-card-brock {
+    -fx-background-color: linear-gradient(to bottom, #8b4513, #a52a2a); /* Marrón claro a marrón oscuro */
+}
+
+/* Fondo de la carta para Gary (colores azules y morados, su estilo sofisticado) */
+.entrenador-card-gary {
+    -fx-background-color: linear-gradient(to bottom, #0000ff, #8a2be2); /* Azul a morado */
+}
+
+/* Fondo de la carta para May (colores cálidos, tonos rosados y anaranjados) */
+.entrenador-card-may {
+    -fx-background-color: linear-gradient(to bottom, #ff69b4, #ff7f50); /* Rosa claro a anaranjado */
+}
+
+/* Fondo de la carta para Dawn (colores fríos, tonos lilas y morados) */
+.entrenador-card-dawn {
+    -fx-background-color: linear-gradient(to bottom, #dda0dd, #9400d3); /* Lila a morado */
+}
+
+/* Fondo de la carta para Iris (colores verdes y amarillos, reflejo de su conexión con la naturaleza) */
+.entrenador-card-iris {
+    -fx-background-color: linear-gradient(to bottom, #32cd32, #228b22); /* Verde claro a verde oscuro */
+}
+
+/* Fondo de la carta para Cilan (colores verdes, representando su afición por la naturaleza y la cocina) */
+.entrenador-card-cilan {
+    -fx-background-color: linear-gradient(to bottom, #32cd32, #006400); /* Verde claro a verde oscuro */
+}
+
+/* Fondo de la carta para Serena (colores cálidos, tonos rosados y suaves) */
+.entrenador-card-serena {
+    -fx-background-color: linear-gradient(to bottom, #ffb6c1, #ff1493); /* Rosa claro a rosa fuerte */
+}
+
+/* Fondo de la carta para Clemont (colores amarillos, reflejando su pasión por la electricidad) */
+.entrenador-card-clemont {
+    -fx-background-color: linear-gradient(to bottom, #ffeb3b, #ff9800); /* Amarillo a naranja */
+}
+
+/* Fondo de la carta para Lana (colores acuáticos, azules y turquesas) */
+.entrenador-card-lana {
+    -fx-background-color: linear-gradient(to bottom, #40e0d0, #00ced1); /* Turquesa a azul */
+}
+
+/* Fondo de la carta para Kiawe (colores cálidos, tonos rojos y naranjas) */
+.entrenador-card-kiawe {
+    -fx-background-color: linear-gradient(to bottom, #ff6347, #ff4500); /* Rojo tomate a rojo fuerte */
+}
+
+/* Fondo de la carta para Goh (colores suaves, tonos verdes y azules) */
+.entrenador-card-goh {
+    -fx-background-color: linear-gradient(to bottom, #00bfff, #32cd32); /* Azul claro a verde */
+}
+
+/* Fondo de la carta para Chloe (colores pastel, tonos suaves de azul y rosa) */
+.entrenador-card-chloe {
+    -fx-background-color: linear-gradient(to bottom, #ffb6c1, #add8e6); /* Rosa claro a azul claro */
+}
+
+/* Fondo de la carta para James (colores morados y lilas, representando su estilo más misterioso) */
+.entrenador-card-james {
+    -fx-background-color: linear-gradient(to bottom, #8a2be2, #dda0dd); /* Morado a lila */
+}
+
+/* Fondo de la carta para Jessie (colores rosas y rojos, colores vibrantes de su personalidad) */
+.entrenador-card-jessie {
+    -fx-background-color: linear-gradient(to bottom, #ff1493, #ff69b4); /* Rosa fuerte a rosa claro */
+}
+
+/* Fondo de la carta para Giovanni (colores oscuros, tonos negros y morados, representando su maldad) */
+.entrenador-card-giovanni {
+    -fx-background-color: linear-gradient(to bottom, #2f4f4f, #800080); /* Gris oscuro a morado */
+}
