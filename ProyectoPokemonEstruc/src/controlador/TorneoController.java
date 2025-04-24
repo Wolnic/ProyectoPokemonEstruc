@@ -7,10 +7,16 @@ package controlador;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.VBox;
+import javafx.stage.Stage;
 
 /**
  * FXML Controller class
@@ -67,5 +73,25 @@ public class TorneoController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }    
+
+    @FXML
+    private void JugarRonda(MouseEvent event) {
+        try {
+        // Cargar el archivo FXML desde la carpeta vista
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/BatallaPokemon.fxml"));
+        Parent root = loader.load();
+
+        // Obtener el escenario actual desde el evento
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        
+        // Cambiar la escena
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+        
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+    }
     
 }
