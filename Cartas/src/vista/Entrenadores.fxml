@@ -7,37 +7,276 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.StackPane?>
-<?import javafx.scene.text.Font?>
 
-<ScrollPane fx:id="scrEntrenadores" fitToHeight="true" fitToWidth="true" prefHeight="780.0" prefWidth="1500.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.EntrenadoresController">
-   <content>
-      <AnchorPane fx:id="anpFrame" prefHeight="780.0" prefWidth="1500.0">
-         <children>
-            
-            <!-- Card for Entrenador 1 -->
-            <StackPane fx:id="stpEntrenador1" layoutX="32.0" layoutY="47.0" onMouseClicked="#selectEntrenador1" prefHeight="233.0" prefWidth="198.0" stylesheets="@../resources/styles.css">
-               <children>
-                  <Label fx:id="lblEntrenador1" alignment="BOTTOM_LEFT" contentDisplay="TOP" layoutX="50.0" layoutY="20.0" styleClass="trainer-name" stylesheets="@../resources/styles.css" text="ASH" translateY="-85.0" StackPane.alignment="CENTER">
-                     <font>
-                        <Font name="Showcard Gothic" size="12.0" />
-                     </font>
-                  </Label>
-                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" translateY="25.0">
-                     <image>
-                        <Image url="@../resources/ash.png" />
-                     </image>
-                  </ImageView>
-               </children>
-               <styleClass>
-                  <String fx:value="entrenador-card-ash" />
-                  <String fx:value="entrenador-card" />
-               </styleClass>
-            </StackPane>
+<ScrollPane fx:id="scrEntrenadores" fitToHeight="true" fitToWidth="true" prefHeight="780.0" prefWidth="1401.0" stylesheets="@../resources/styles.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.EntrenadoresController">
 
-            <!-- Efecto emergente al pasar el mouse -->
-            <Tooltip fx:id="tooltipEntrenador1" styleClass="tooltip-card" text="Especialidad: Fuego\nGeneración: 1\nPokémon Favorito: Charizard" />
-            
-         </children>
-      </AnchorPane>
-   </content>
+    <content>
+        <AnchorPane fx:id="anpFrame" prefHeight="778.0" prefWidth="1419.0">
+            <children>
+
+                <ImageView fitHeight="770.0" fitWidth="1412.0" layoutY="-1.0" pickOnBounds="true">
+                    <image>
+                        <Image url="@../resources/fondoEntrenadores.png" />
+                    </image>
+                </ImageView>
+                <Label layoutX="216.0" layoutY="32.0" prefHeight="91.0" prefWidth="981.0" styleClass="pokemon-title" stylesheets="@../resources/styles.css" text="SELECCIONE SU ENTRENADOR" />
+
+                <StackPane fx:id="stpAsh" layoutX="28.0" layoutY="140.0" onMouseEntered="#showAshDetails" onMouseExited="#hideAshDetails" prefHeight="247.0" prefWidth="225.0">
+                    <children>
+
+                        <ImageView fx:id="imgAsh" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" translateY="25.0">
+                            <image>
+                                <Image url="@../resources/ash.png" />
+                            </image>
+                        </ImageView>
+
+                        <Label fx:id="lblAsh" alignment="BOTTOM_LEFT" contentDisplay="TOP" styleClass="label-entrenador" stylesheets="@../resources/styles.css" text="ASH" translateY="-85.0" StackPane.alignment="CENTER" />
+
+                        <AnchorPane fx:id="anpAshDetails" layoutX="10.0" layoutY="10.0" prefHeight="225.0" prefWidth="225.0" scaleZ="0.0" styleClass="entrenador-info-pane" visible="false">
+                            <children>
+                                <Label layoutX="10.0" layoutY="10.0" styleClass="entrenador-info-label" text="Pokémon Favorito: Pikachu" />
+                                <Label layoutX="10.0" layoutY="40.0" styleClass="entrenador-info-label" text="Generación: 1" />
+                                <Label layoutX="10.0" layoutY="70.0" styleClass="entrenador-info-label" text="Región: Kanto" />
+                                <Label layoutX="10.0" layoutY="100.0" styleClass="entrenador-info-label" text="Tipo Especialidad: Eléctrico" />
+                                <Label layoutX="10.0" layoutY="130.0" styleClass="entrenador-info-label" text="Medallas: 8" />
+                                <Label layoutX="10.0" layoutY="160.0" styleClass="entrenador-info-label" text="Nivel: Experto" />
+                            </children>
+                        </AnchorPane>
+
+                    </children>
+
+                    <styleClass>
+                        <String fx:value="entrenador-card" />
+                        <String fx:value="entrenador-card-ash" />
+                    </styleClass>
+                </StackPane>
+                <StackPane fx:id="stpMisty" layoutX="300.0" layoutY="140.0" onMouseEntered="#showMistyDetails" onMouseExited="#hideMistyDetails" prefHeight="247.0" prefWidth="225.0">
+                    <children>
+                        <ImageView fx:id="imgMisty" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" translateY="25.0">
+                            <image>
+                                <Image url="@../resources/misty.png" />
+                            </image>
+                        </ImageView>
+                        <Label fx:id="lblMisty" alignment="BOTTOM_LEFT" contentDisplay="TOP" styleClass="label-entrenador" stylesheets="@../resources/styles.css" text="MISTY" translateY="-85.0" StackPane.alignment="CENTER" />
+                        <AnchorPane fx:id="anpMistyDetails" layoutX="10.0" layoutY="10.0" prefHeight="225.0" prefWidth="225.0" scaleZ="0.0" styleClass="entrenador-info-pane" visible="false">
+                            <children>
+                                <Label layoutX="10.0" layoutY="10.0" styleClass="entrenador-info-label" text="Pokémon Favorito: Starmie" />
+                                <Label layoutX="10.0" layoutY="40.0" styleClass="entrenador-info-label" text="Generación: 1" />
+                                <Label layoutX="10.0" layoutY="70.0" styleClass="entrenador-info-label" text="Región: Kanto" />
+                                <Label layoutX="10.0" layoutY="100.0" styleClass="entrenador-info-label" text="Tipo Especialidad: Agua" />
+                                <Label layoutX="10.0" layoutY="130.0" styleClass="entrenador-info-label" text="Medallas: 4" />
+                                <Label layoutX="10.0" layoutY="160.0" styleClass="entrenador-info-label" text="Nivel: Líder de Gimnasio" />
+
+                            </children>
+                        </AnchorPane>
+                    </children>
+                    <styleClass>
+                        <String fx:value="entrenador-card" />
+                        <String fx:value="entrenador-card-misty" />
+                    </styleClass>
+                </StackPane>
+                <StackPane fx:id="stpBrock" layoutX="574.0" layoutY="140.0" onMouseEntered="#showBrockDetails" onMouseExited="#hideBrockDetails" prefHeight="247.0" prefWidth="225.0">
+                    <children>
+                        <ImageView fx:id="imgBrock" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" translateY="25.0">
+                            <image>
+                                <Image url="@../resources/brock.png" />
+                            </image>
+                        </ImageView>
+                        <Label fx:id="lblBrock" alignment="BOTTOM_LEFT" contentDisplay="TOP" styleClass="label-entrenador" stylesheets="@../resources/styles.css" text="BROCK" translateY="-85.0" StackPane.alignment="CENTER" />
+                        <AnchorPane fx:id="anpBrockDetails" layoutX="10.0" layoutY="10.0" prefHeight="225.0" prefWidth="225.0" scaleZ="0.0" styleClass="entrenador-info-pane" visible="false">
+                            <children>
+                                <Label layoutX="10.0" layoutY="10.0" styleClass="entrenador-info-label" text="Pokémon Favorito: Onix" />
+                                <Label layoutX="10.0" layoutY="40.0" styleClass="entrenador-info-label" text="Generación: 1" />
+                                <Label layoutX="10.0" layoutY="70.0" styleClass="entrenador-info-label" text="Región: Kanto" />
+                                <Label layoutX="10.0" layoutY="100.0" styleClass="entrenador-info-label" text="Tipo Especialidad: Roca" />
+                                <Label layoutX="10.0" layoutY="130.0" styleClass="entrenador-info-label" text="Medallas: 5" />
+                                <Label layoutX="10.0" layoutY="160.0" styleClass="entrenador-info-label" text="Nivel: Líder de Gimnasio" />
+
+                            </children>
+                        </AnchorPane>
+                    </children>
+                    <styleClass>
+                        <String fx:value="entrenador-card" />
+                        <String fx:value="entrenador-card-brock" />
+                    </styleClass>
+                </StackPane>
+                <StackPane fx:id="stpGary" layoutX="847.0" layoutY="140.0" onMouseEntered="#showGaryDetails" onMouseExited="#hideGaryDetails" prefHeight="247.0" prefWidth="225.0">
+                    <children>
+                        <ImageView fx:id="imgGary" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" translateY="25.0">
+                            <image>
+                                <Image url="@../resources/gary.png" />
+                            </image>
+                        </ImageView>
+                        <Label fx:id="lblGary" alignment="BOTTOM_LEFT" contentDisplay="TOP" styleClass="label-entrenador" stylesheets="@../resources/styles.css" text="GARY" translateY="-85.0" StackPane.alignment="CENTER" />
+                        <AnchorPane fx:id="anpGaryDetails" layoutX="10.0" layoutY="10.0" prefHeight="225.0" prefWidth="225.0" scaleZ="0.0" styleClass="entrenador-info-pane" visible="false">
+                            <children>
+                                <Label layoutX="10.0" layoutY="10.0" styleClass="entrenador-info-label" text="Pokémon Favorito: Umbreon" />
+                                <Label layoutX="10.0" layoutY="40.0" styleClass="entrenador-info-label" text="Generación: 1" />
+                                <Label layoutX="10.0" layoutY="70.0" styleClass="entrenador-info-label" text="Región: Kanto" />
+                                <Label layoutX="10.0" layoutY="100.0" styleClass="entrenador-info-label" text="Tipo Especialidad: Normal" />
+                                <Label layoutX="10.0" layoutY="130.0" styleClass="entrenador-info-label" text="Medallas: 10" />
+                                <Label layoutX="10.0" layoutY="160.0" styleClass="entrenador-info-label" text="Nivel: Investigador Pokémon" />
+
+                            </children>
+                        </AnchorPane>
+                    </children>
+                    <styleClass>
+                        <String fx:value="entrenador-card" />
+                        <String fx:value="entrenador-card-gary" />
+                    </styleClass>
+                </StackPane>
+                <StackPane fx:id="stpMay" layoutX="1118.0" layoutY="140.0" onMouseEntered="#showMayDetails" onMouseExited="#hideMayDetails" prefHeight="247.0" prefWidth="225.0">
+                    <children>
+                        <ImageView fx:id="imgMay" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" translateY="25.0">
+                            <image>
+                                <Image url="@../resources/may.png" />
+                            </image>
+                        </ImageView>
+                        <Label fx:id="lblMay" alignment="BOTTOM_LEFT" contentDisplay="TOP" styleClass="label-entrenador" stylesheets="@../resources/styles.css" text="MAY" translateY="-85.0" StackPane.alignment="CENTER" />
+                        <AnchorPane fx:id="anpMayDetails" layoutX="10.0" layoutY="10.0" prefHeight="225.0" prefWidth="225.0" scaleZ="0.0" styleClass="entrenador-info-pane" visible="false">
+                            <children>
+                                <Label layoutX="10.0" layoutY="10.0" styleClass="entrenador-info-label" text="Pokémon Favorito: Blaziken" />
+                                <Label layoutX="10.0" layoutY="40.0" styleClass="entrenador-info-label" text="Generación: 3" />
+                                <Label layoutX="10.0" layoutY="70.0" styleClass="entrenador-info-label" text="Región: Hoenn" />
+                                <Label layoutX="10.0" layoutY="100.0" styleClass="entrenador-info-label" text="Tipo Especialidad: Fuego" />
+                                <Label layoutX="10.0" layoutY="130.0" styleClass="entrenador-info-label" text="Medallas: 5" />
+                                <Label layoutX="10.0" layoutY="160.0" styleClass="entrenador-info-label" text="Nivel: Coordinadora Pokémon" />
+
+                            </children>
+                        </AnchorPane>
+                    </children>
+                    <styleClass>
+                        <String fx:value="entrenador-card" />
+                        <String fx:value="entrenador-card-may" />
+                    </styleClass>
+                </StackPane>
+                <StackPane fx:id="stpDawn" layoutX="27.0" layoutY="441.0" onMouseEntered="#showDawnDetails" onMouseExited="#hideDawnDetails" prefHeight="247.0" prefWidth="225.0">
+                    <children>
+                        <ImageView fx:id="imgDawn" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" translateY="25.0">
+                            <image>
+                                <Image url="@../resources/dawn.png" />
+                            </image>
+                        </ImageView>
+                        <Label fx:id="lblDawn" alignment="BOTTOM_LEFT" contentDisplay="TOP" styleClass="label-entrenador" stylesheets="@../resources/styles.css" text="DAWN" translateY="-85.0" StackPane.alignment="CENTER" />
+                        <AnchorPane fx:id="anpDawnDetails" layoutX="10.0" layoutY="10.0" prefHeight="225.0" prefWidth="225.0" scaleZ="0.0" styleClass="entrenador-info-pane" visible="false">
+                            <children>
+                                <Label layoutX="10.0" layoutY="10.0" styleClass="entrenador-info-label" text="Pokémon Favorito: Piplup" />
+                                <Label layoutX="10.0" layoutY="40.0" styleClass="entrenador-info-label" text="Generación: 4" />
+                                <Label layoutX="10.0" layoutY="70.0" styleClass="entrenador-info-label" text="Región: Sinnoh" />
+                                <Label layoutX="10.0" layoutY="100.0" styleClass="entrenador-info-label" text="Tipo Especialidad: Hielo" />
+                                <Label layoutX="10.0" layoutY="130.0" styleClass="entrenador-info-label" text="Medallas: 3" />
+                                <Label layoutX="10.0" layoutY="160.0" styleClass="entrenador-info-label" text="Nivel: Coordinadora Pokémon" />
+
+                            </children>
+                        </AnchorPane>
+                    </children>
+                    <styleClass>
+                        <String fx:value="entrenador-card" />
+                        <String fx:value="entrenador-card-dawn" />
+                    </styleClass>
+                </StackPane>
+                <StackPane fx:id="stpIris" layoutX="299.0" layoutY="441.0" onMouseEntered="#showIrisDetails" onMouseExited="#hideIrisDetails" prefHeight="247.0" prefWidth="225.0">
+                    <children>
+                        <ImageView fx:id="imgIris" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" translateY="25.0">
+                            <image>
+                                <Image url="@../resources/iris.png" />
+                            </image>
+                        </ImageView>
+                        <Label fx:id="lblIris" alignment="BOTTOM_LEFT" contentDisplay="TOP" styleClass="label-entrenador" stylesheets="@../resources/styles.css" text="IRIS" translateY="-85.0" StackPane.alignment="CENTER" />
+                        <AnchorPane fx:id="anpIrisDetails" layoutX="10.0" layoutY="10.0" prefHeight="225.0" prefWidth="225.0" scaleZ="0.0" styleClass="entrenador-info-pane" visible="false">
+                            <children>
+                                <Label layoutX="10.0" layoutY="10.0" styleClass="entrenador-info-label" text="Pokémon Favorito: Haxorus" />
+                                <Label layoutX="10.0" layoutY="40.0" styleClass="entrenador-info-label" text="Generación: 5" />
+                                <Label layoutX="10.0" layoutY="70.0" styleClass="entrenador-info-label" text="Región: Unova" />
+                                <Label layoutX="10.0" layoutY="100.0" styleClass="entrenador-info-label" text="Tipo Especialidad: Dragón" />
+                                <Label layoutX="10.0" layoutY="130.0" styleClass="entrenador-info-label" text="Medallas: 6" />
+                                <Label layoutX="10.0" layoutY="160.0" styleClass="entrenador-info-label" text="Nivel: Campeona" />
+
+                            </children>
+                        </AnchorPane>
+                    </children>
+                    <styleClass>
+                        <String fx:value="entrenador-card" />
+                        <String fx:value="entrenador-card-iris" />
+                    </styleClass>
+                </StackPane>
+                <StackPane fx:id="stpSerena" layoutX="573.0" layoutY="441.0" onMouseEntered="#showSerenaDetails" onMouseExited="#hideSerenaDetails" prefHeight="247.0" prefWidth="225.0">
+                    <children>
+                        <ImageView fx:id="imgSerena" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" translateY="25.0">
+                            <image>
+                                <Image url="@../resources/serena.png" />
+                            </image>
+                        </ImageView>
+                        <Label fx:id="lblSerena" alignment="BOTTOM_LEFT" contentDisplay="TOP" styleClass="label-entrenador" stylesheets="@../resources/styles.css" text="SERENA" translateY="-85.0" StackPane.alignment="CENTER" />
+                        <AnchorPane fx:id="anpSerenaDetails" layoutX="10.0" layoutY="10.0" prefHeight="225.0" prefWidth="225.0" scaleZ="0.0" styleClass="entrenador-info-pane" visible="false">
+                            <children>
+                                <Label layoutX="10.0" layoutY="10.0" styleClass="entrenador-info-label" text="Pokémon Favorito: Sylveon" />
+                                <Label layoutX="10.0" layoutY="40.0" styleClass="entrenador-info-label" text="Generación: 6" />
+                                <Label layoutX="10.0" layoutY="70.0" styleClass="entrenador-info-label" text="Región: Kalos" />
+                                <Label layoutX="10.0" layoutY="100.0" styleClass="entrenador-info-label" text="Tipo Especialidad: Hada" />
+                                <Label layoutX="10.0" layoutY="130.0" styleClass="entrenador-info-label" text="Medallas: 2" />
+                                <Label layoutX="10.0" layoutY="160.0" styleClass="entrenador-info-label" text="Nivel: Reina de Kalos (en proceso)" />
+
+                            </children>
+                        </AnchorPane>
+                    </children>
+                    <styleClass>
+                        <String fx:value="entrenador-card" />
+                        <String fx:value="entrenador-card-serena" />
+                    </styleClass>
+                </StackPane>
+                <StackPane fx:id="stpKiawe" layoutX="846.0" layoutY="441.0" onMouseEntered="#showKiaweDetails" onMouseExited="#hideKiaweDetails" prefHeight="247.0" prefWidth="225.0">
+                    <children>
+                        <ImageView fx:id="imgKiawe" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" translateY="25.0">
+                            <image>
+                                <Image url="@../resources/kiawe.png" />
+                            </image>
+                        </ImageView>
+                        <Label fx:id="lblKiawe" alignment="BOTTOM_LEFT" contentDisplay="TOP" styleClass="label-entrenador" stylesheets="@../resources/styles.css" text="KIAWE" translateY="-85.0" StackPane.alignment="CENTER" />
+                        <AnchorPane fx:id="anpKiaweDetails" layoutX="10.0" layoutY="10.0" prefHeight="225.0" prefWidth="225.0" scaleZ="0.0" styleClass="entrenador-info-pane" visible="false">
+                            <children>
+                                <Label layoutX="10.0" layoutY="10.0" styleClass="entrenador-info-label" text="Pokémon Favorito: Turtonator" />
+                                <Label layoutX="10.0" layoutY="40.0" styleClass="entrenador-info-label" text="Generación: 7" />
+                                <Label layoutX="10.0" layoutY="70.0" styleClass="entrenador-info-label" text="Región: Alola" />
+                                <Label layoutX="10.0" layoutY="100.0" styleClass="entrenador-info-label" text="Tipo Especialidad: Fuego" />
+                                <Label layoutX="10.0" layoutY="130.0" styleClass="entrenador-info-label" text="Medallas: 4 (Pruebas de isla)" />
+                                <Label layoutX="10.0" layoutY="160.0" styleClass="entrenador-info-label" text="Nivel: Capitán de Isla" />
+
+                            </children>
+                        </AnchorPane>
+                    </children>
+                    <styleClass>
+                        <String fx:value="entrenador-card" />
+                        <String fx:value="entrenador-card-kiawe" />
+                    </styleClass>
+                </StackPane>
+                <StackPane fx:id="stpGiovanni" layoutX="1117.0" layoutY="441.0" onMouseEntered="#showGiovanniDetails" onMouseExited="#hideGiovanniDetails" prefHeight="247.0" prefWidth="225.0">
+                    <children>
+                        <ImageView fx:id="imgGiovanni" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" translateY="25.0">
+                            <image>
+                                <Image url="@../resources/giovanni.png" />
+                            </image>
+                        </ImageView>
+                        <Label fx:id="lblGiovanni" alignment="BOTTOM_LEFT" contentDisplay="TOP" styleClass="label-entrenador" stylesheets="@../resources/styles.css" text="GIOVANNI" translateY="-85.0" StackPane.alignment="CENTER" />
+                        <AnchorPane fx:id="anpGiovanniDetails" layoutX="10.0" layoutY="10.0" prefHeight="225.0" prefWidth="225.0" scaleZ="0.0" styleClass="entrenador-info-pane" visible="false">
+                            <children>
+                                <Label layoutX="10.0" layoutY="10.0" styleClass="entrenador-info-label" text="Pokémon Favorito: Persian" />
+                                <Label layoutX="10.0" layoutY="40.0" styleClass="entrenador-info-label" text="Generación: 1" />
+                                <Label layoutX="10.0" layoutY="70.0" styleClass="entrenador-info-label" text="Región: Kanto" />
+                                <Label layoutX="10.0" layoutY="100.0" styleClass="entrenador-info-label" text="Tipo Especialidad: Tierra" />
+                                <Label layoutX="10.0" layoutY="130.0" styleClass="entrenador-info-label" text="Medallas: 8" />
+                                <Label layoutX="10.0" layoutY="160.0" styleClass="entrenador-info-label" text="Nivel: Líder del Team Rocket" />
+
+                            </children>
+                        </AnchorPane>
+                    </children>
+                    <styleClass>
+                        <String fx:value="entrenador-card" />
+                        <String fx:value="entrenador-card-giovanni" />
+                    </styleClass>
+                </StackPane>
+
+            </children>
+        </AnchorPane>
+    </content>
 </ScrollPane>
