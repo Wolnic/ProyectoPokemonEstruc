@@ -85,13 +85,12 @@
                         <Label fx:id="lblBrock" alignment="BOTTOM_LEFT" contentDisplay="TOP" styleClass="label-entrenador" stylesheets="@../resources/styles.css" text="BROCK" translateY="-85.0" StackPane.alignment="CENTER" />
                         <AnchorPane fx:id="anpBrockDetails" layoutX="10.0" layoutY="10.0" prefHeight="225.0" prefWidth="225.0" scaleZ="0.0" styleClass="entrenador-info-pane" visible="false">
                             <children>
-                                <Label layoutX="10.0" layoutY="10.0" styleClass="entrenador-info-label" text="Pokémon Favorito: Onix" />
+                                <Label layoutX="10.0" layoutY="10.0" styleClass="entrenador-info-label" text="Pokémon Favorito: Pikachu" />
                                 <Label layoutX="10.0" layoutY="40.0" styleClass="entrenador-info-label" text="Generación: 1" />
                                 <Label layoutX="10.0" layoutY="70.0" styleClass="entrenador-info-label" text="Región: Kanto" />
-                                <Label layoutX="10.0" layoutY="100.0" styleClass="entrenador-info-label" text="Tipo Especialidad: Roca" />
-                                <Label layoutX="10.0" layoutY="130.0" styleClass="entrenador-info-label" text="Medallas: 5" />
-                                <Label layoutX="10.0" layoutY="160.0" styleClass="entrenador-info-label" text="Nivel: Líder de Gimnasio" />
-
+                                <Label layoutX="10.0" layoutY="100.0" styleClass="entrenador-info-label" text="Tipo Especialidad: Eléctrico" />
+                                <Label layoutX="10.0" layoutY="130.0" styleClass="entrenador-info-label" text="Medallas: 8" />
+                                <Label layoutX="10.0" layoutY="160.0" styleClass="entrenador-info-label" text="Nivel: Experto" />
                             </children>
                         </AnchorPane>
                     </children>
@@ -110,13 +109,12 @@
                         <Label fx:id="lblGary" alignment="BOTTOM_LEFT" contentDisplay="TOP" styleClass="label-entrenador" stylesheets="@../resources/styles.css" text="GARY" translateY="-85.0" StackPane.alignment="CENTER" />
                         <AnchorPane fx:id="anpGaryDetails" layoutX="10.0" layoutY="10.0" prefHeight="225.0" prefWidth="225.0" scaleZ="0.0" styleClass="entrenador-info-pane" visible="false">
                             <children>
-                                <Label layoutX="10.0" layoutY="10.0" styleClass="entrenador-info-label" text="Pokémon Favorito: Umbreon" />
+                                <Label layoutX="10.0" layoutY="10.0" styleClass="entrenador-info-label" text="Pokémon Favorito: Pikachu" />
                                 <Label layoutX="10.0" layoutY="40.0" styleClass="entrenador-info-label" text="Generación: 1" />
                                 <Label layoutX="10.0" layoutY="70.0" styleClass="entrenador-info-label" text="Región: Kanto" />
-                                <Label layoutX="10.0" layoutY="100.0" styleClass="entrenador-info-label" text="Tipo Especialidad: Normal" />
-                                <Label layoutX="10.0" layoutY="130.0" styleClass="entrenador-info-label" text="Medallas: 10" />
-                                <Label layoutX="10.0" layoutY="160.0" styleClass="entrenador-info-label" text="Nivel: Investigador Pokémon" />
-
+                                <Label layoutX="10.0" layoutY="100.0" styleClass="entrenador-info-label" text="Tipo Especialidad: Eléctrico" />
+                                <Label layoutX="10.0" layoutY="130.0" styleClass="entrenador-info-label" text="Medallas: 8" />
+                                <Label layoutX="10.0" layoutY="160.0" styleClass="entrenador-info-label" text="Nivel: Experto" />
                             </children>
                         </AnchorPane>
                     </children>
@@ -135,13 +133,12 @@
                         <Label fx:id="lblMay" alignment="BOTTOM_LEFT" contentDisplay="TOP" styleClass="label-entrenador" stylesheets="@../resources/styles.css" text="MAY" translateY="-85.0" StackPane.alignment="CENTER" />
                         <AnchorPane fx:id="anpMayDetails" layoutX="10.0" layoutY="10.0" prefHeight="225.0" prefWidth="225.0" scaleZ="0.0" styleClass="entrenador-info-pane" visible="false">
                             <children>
-                                <Label layoutX="10.0" layoutY="10.0" styleClass="entrenador-info-label" text="Pokémon Favorito: Blaziken" />
-                                <Label layoutX="10.0" layoutY="40.0" styleClass="entrenador-info-label" text="Generación: 3" />
-                                <Label layoutX="10.0" layoutY="70.0" styleClass="entrenador-info-label" text="Región: Hoenn" />
-                                <Label layoutX="10.0" layoutY="100.0" styleClass="entrenador-info-label" text="Tipo Especialidad: Fuego" />
-                                <Label layoutX="10.0" layoutY="130.0" styleClass="entrenador-info-label" text="Medallas: 5" />
-                                <Label layoutX="10.0" layoutY="160.0" styleClass="entrenador-info-label" text="Nivel: Coordinadora Pokémon" />
-
+                                <Label layoutX="10.0" layoutY="10.0" styleClass="entrenador-info-label" text="Pokémon Favorito: Pikachu" />
+                                <Label layoutX="10.0" layoutY="40.0" styleClass="entrenador-info-label" text="Generación: 1" />
+                                <Label layoutX="10.0" layoutY="70.0" styleClass="entrenador-info-label" text="Región: Kanto" />
+                                <Label layoutX="10.0" layoutY="100.0" styleClass="entrenador-info-label" text="Tipo Especialidad: Eléctrico" />
+                                <Label layoutX="10.0" layoutY="130.0" styleClass="entrenador-info-label" text="Medallas: 8" />
+                                <Label layoutX="10.0" layoutY="160.0" styleClass="entrenador-info-label" text="Nivel: Experto" />
                             </children>
                         </AnchorPane>
                     </children>
@@ -160,13 +157,12 @@
                         <Label fx:id="lblDawn" alignment="BOTTOM_LEFT" contentDisplay="TOP" styleClass="label-entrenador" stylesheets="@../resources/styles.css" text="DAWN" translateY="-85.0" StackPane.alignment="CENTER" />
                         <AnchorPane fx:id="anpDawnDetails" layoutX="10.0" layoutY="10.0" prefHeight="225.0" prefWidth="225.0" scaleZ="0.0" styleClass="entrenador-info-pane" visible="false">
                             <children>
-                                <Label layoutX="10.0" layoutY="10.0" styleClass="entrenador-info-label" text="Pokémon Favorito: Piplup" />
-                                <Label layoutX="10.0" layoutY="40.0" styleClass="entrenador-info-label" text="Generación: 4" />
-                                <Label layoutX="10.0" layoutY="70.0" styleClass="entrenador-info-label" text="Región: Sinnoh" />
-                                <Label layoutX="10.0" layoutY="100.0" styleClass="entrenador-info-label" text="Tipo Especialidad: Hielo" />
-                                <Label layoutX="10.0" layoutY="130.0" styleClass="entrenador-info-label" text="Medallas: 3" />
-                                <Label layoutX="10.0" layoutY="160.0" styleClass="entrenador-info-label" text="Nivel: Coordinadora Pokémon" />
-
+                                <Label layoutX="10.0" layoutY="10.0" styleClass="entrenador-info-label" text="Pokémon Favorito: Pikachu" />
+                                <Label layoutX="10.0" layoutY="40.0" styleClass="entrenador-info-label" text="Generación: 1" />
+                                <Label layoutX="10.0" layoutY="70.0" styleClass="entrenador-info-label" text="Región: Kanto" />
+                                <Label layoutX="10.0" layoutY="100.0" styleClass="entrenador-info-label" text="Tipo Especialidad: Eléctrico" />
+                                <Label layoutX="10.0" layoutY="130.0" styleClass="entrenador-info-label" text="Medallas: 8" />
+                                <Label layoutX="10.0" layoutY="160.0" styleClass="entrenador-info-label" text="Nivel: Experto" />
                             </children>
                         </AnchorPane>
                     </children>
@@ -185,13 +181,12 @@
                         <Label fx:id="lblIris" alignment="BOTTOM_LEFT" contentDisplay="TOP" styleClass="label-entrenador" stylesheets="@../resources/styles.css" text="IRIS" translateY="-85.0" StackPane.alignment="CENTER" />
                         <AnchorPane fx:id="anpIrisDetails" layoutX="10.0" layoutY="10.0" prefHeight="225.0" prefWidth="225.0" scaleZ="0.0" styleClass="entrenador-info-pane" visible="false">
                             <children>
-                                <Label layoutX="10.0" layoutY="10.0" styleClass="entrenador-info-label" text="Pokémon Favorito: Haxorus" />
-                                <Label layoutX="10.0" layoutY="40.0" styleClass="entrenador-info-label" text="Generación: 5" />
-                                <Label layoutX="10.0" layoutY="70.0" styleClass="entrenador-info-label" text="Región: Unova" />
-                                <Label layoutX="10.0" layoutY="100.0" styleClass="entrenador-info-label" text="Tipo Especialidad: Dragón" />
-                                <Label layoutX="10.0" layoutY="130.0" styleClass="entrenador-info-label" text="Medallas: 6" />
-                                <Label layoutX="10.0" layoutY="160.0" styleClass="entrenador-info-label" text="Nivel: Campeona" />
-
+                                <Label layoutX="10.0" layoutY="10.0" styleClass="entrenador-info-label" text="Pokémon Favorito: Pikachu" />
+                                <Label layoutX="10.0" layoutY="40.0" styleClass="entrenador-info-label" text="Generación: 1" />
+                                <Label layoutX="10.0" layoutY="70.0" styleClass="entrenador-info-label" text="Región: Kanto" />
+                                <Label layoutX="10.0" layoutY="100.0" styleClass="entrenador-info-label" text="Tipo Especialidad: Eléctrico" />
+                                <Label layoutX="10.0" layoutY="130.0" styleClass="entrenador-info-label" text="Medallas: 8" />
+                                <Label layoutX="10.0" layoutY="160.0" styleClass="entrenador-info-label" text="Nivel: Experto" />
                             </children>
                         </AnchorPane>
                     </children>
@@ -210,13 +205,12 @@
                         <Label fx:id="lblSerena" alignment="BOTTOM_LEFT" contentDisplay="TOP" styleClass="label-entrenador" stylesheets="@../resources/styles.css" text="SERENA" translateY="-85.0" StackPane.alignment="CENTER" />
                         <AnchorPane fx:id="anpSerenaDetails" layoutX="10.0" layoutY="10.0" prefHeight="225.0" prefWidth="225.0" scaleZ="0.0" styleClass="entrenador-info-pane" visible="false">
                             <children>
-                                <Label layoutX="10.0" layoutY="10.0" styleClass="entrenador-info-label" text="Pokémon Favorito: Sylveon" />
-                                <Label layoutX="10.0" layoutY="40.0" styleClass="entrenador-info-label" text="Generación: 6" />
-                                <Label layoutX="10.0" layoutY="70.0" styleClass="entrenador-info-label" text="Región: Kalos" />
-                                <Label layoutX="10.0" layoutY="100.0" styleClass="entrenador-info-label" text="Tipo Especialidad: Hada" />
-                                <Label layoutX="10.0" layoutY="130.0" styleClass="entrenador-info-label" text="Medallas: 2" />
-                                <Label layoutX="10.0" layoutY="160.0" styleClass="entrenador-info-label" text="Nivel: Reina de Kalos (en proceso)" />
-
+                                <Label layoutX="10.0" layoutY="10.0" styleClass="entrenador-info-label" text="Pokémon Favorito: Pikachu" />
+                                <Label layoutX="10.0" layoutY="40.0" styleClass="entrenador-info-label" text="Generación: 1" />
+                                <Label layoutX="10.0" layoutY="70.0" styleClass="entrenador-info-label" text="Región: Kanto" />
+                                <Label layoutX="10.0" layoutY="100.0" styleClass="entrenador-info-label" text="Tipo Especialidad: Eléctrico" />
+                                <Label layoutX="10.0" layoutY="130.0" styleClass="entrenador-info-label" text="Medallas: 8" />
+                                <Label layoutX="10.0" layoutY="160.0" styleClass="entrenador-info-label" text="Nivel: Experto" />
                             </children>
                         </AnchorPane>
                     </children>
@@ -235,13 +229,12 @@
                         <Label fx:id="lblKiawe" alignment="BOTTOM_LEFT" contentDisplay="TOP" styleClass="label-entrenador" stylesheets="@../resources/styles.css" text="KIAWE" translateY="-85.0" StackPane.alignment="CENTER" />
                         <AnchorPane fx:id="anpKiaweDetails" layoutX="10.0" layoutY="10.0" prefHeight="225.0" prefWidth="225.0" scaleZ="0.0" styleClass="entrenador-info-pane" visible="false">
                             <children>
-                                <Label layoutX="10.0" layoutY="10.0" styleClass="entrenador-info-label" text="Pokémon Favorito: Turtonator" />
-                                <Label layoutX="10.0" layoutY="40.0" styleClass="entrenador-info-label" text="Generación: 7" />
-                                <Label layoutX="10.0" layoutY="70.0" styleClass="entrenador-info-label" text="Región: Alola" />
-                                <Label layoutX="10.0" layoutY="100.0" styleClass="entrenador-info-label" text="Tipo Especialidad: Fuego" />
-                                <Label layoutX="10.0" layoutY="130.0" styleClass="entrenador-info-label" text="Medallas: 4 (Pruebas de isla)" />
-                                <Label layoutX="10.0" layoutY="160.0" styleClass="entrenador-info-label" text="Nivel: Capitán de Isla" />
-
+                                <Label layoutX="10.0" layoutY="10.0" styleClass="entrenador-info-label" text="Pokémon Favorito: Pikachu" />
+                                <Label layoutX="10.0" layoutY="40.0" styleClass="entrenador-info-label" text="Generación: 1" />
+                                <Label layoutX="10.0" layoutY="70.0" styleClass="entrenador-info-label" text="Región: Kanto" />
+                                <Label layoutX="10.0" layoutY="100.0" styleClass="entrenador-info-label" text="Tipo Especialidad: Eléctrico" />
+                                <Label layoutX="10.0" layoutY="130.0" styleClass="entrenador-info-label" text="Medallas: 8" />
+                                <Label layoutX="10.0" layoutY="160.0" styleClass="entrenador-info-label" text="Nivel: Experto" />
                             </children>
                         </AnchorPane>
                     </children>
@@ -260,13 +253,12 @@
                         <Label fx:id="lblGiovanni" alignment="BOTTOM_LEFT" contentDisplay="TOP" styleClass="label-entrenador" stylesheets="@../resources/styles.css" text="GIOVANNI" translateY="-85.0" StackPane.alignment="CENTER" />
                         <AnchorPane fx:id="anpGiovanniDetails" layoutX="10.0" layoutY="10.0" prefHeight="225.0" prefWidth="225.0" scaleZ="0.0" styleClass="entrenador-info-pane" visible="false">
                             <children>
-                                <Label layoutX="10.0" layoutY="10.0" styleClass="entrenador-info-label" text="Pokémon Favorito: Persian" />
+                                <Label layoutX="10.0" layoutY="10.0" styleClass="entrenador-info-label" text="Pokémon Favorito: Pikachu" />
                                 <Label layoutX="10.0" layoutY="40.0" styleClass="entrenador-info-label" text="Generación: 1" />
                                 <Label layoutX="10.0" layoutY="70.0" styleClass="entrenador-info-label" text="Región: Kanto" />
-                                <Label layoutX="10.0" layoutY="100.0" styleClass="entrenador-info-label" text="Tipo Especialidad: Tierra" />
+                                <Label layoutX="10.0" layoutY="100.0" styleClass="entrenador-info-label" text="Tipo Especialidad: Eléctrico" />
                                 <Label layoutX="10.0" layoutY="130.0" styleClass="entrenador-info-label" text="Medallas: 8" />
-                                <Label layoutX="10.0" layoutY="160.0" styleClass="entrenador-info-label" text="Nivel: Líder del Team Rocket" />
-
+                                <Label layoutX="10.0" layoutY="160.0" styleClass="entrenador-info-label" text="Nivel: Experto" />
                             </children>
                         </AnchorPane>
                     </children>
