@@ -4,12 +4,15 @@
  */
 package controlador;
 
+import java.awt.Insets;
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.animation.PauseTransition;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
@@ -20,8 +23,11 @@ import javafx.scene.control.ScrollPane;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
+import javafx.util.Duration;
 
 /**
  * FXML Controller class
@@ -223,80 +229,65 @@ public class EntrenadoresController implements Initializable {
         anpGiovanniDetails.setVisible(true);
     }
 
-  private String entrenadorSeleccionado;
+    @FXML
+private Pane cartaSeleccionada;
+
+private String entrenadorSeleccionado = null;
 
     @FXML
     private void handleAshClick(MouseEvent event) {
-        entrenadorSeleccionado = "Ash";
-        mostrarMensaje("Seleccionaste a Ash");
+        seleccionarEntrenador("Ash", event);
     }
 
     @FXML
     private void handleMistyClick(MouseEvent event) {
-        entrenadorSeleccionado = "Misty";
-        mostrarMensaje("Seleccionaste a Misty");
+        seleccionarEntrenador("Misty", event);
     }
 
     @FXML
     private void handleBrockClick(MouseEvent event) {
-        entrenadorSeleccionado = "Brock";
-        mostrarMensaje("Seleccionaste a Brock");
+        seleccionarEntrenador("Brock", event);
     }
 
     @FXML
     private void handleGaryClick(MouseEvent event) {
-        entrenadorSeleccionado = "Gary";
-        mostrarMensaje("Seleccionaste a Gary");
+        seleccionarEntrenador("Gary", event);
     }
 
     @FXML
     private void handleMayClick(MouseEvent event) {
-        entrenadorSeleccionado = "May";
-        mostrarMensaje("Seleccionaste a May");
+        seleccionarEntrenador("May", event);
     }
 
     @FXML
     private void handleDawnClick(MouseEvent event) {
-        entrenadorSeleccionado = "Dawn";
-        mostrarMensaje("Seleccionaste a Dawn");
+        seleccionarEntrenador("Dawn", event);
     }
 
     @FXML
     private void handleIrisClick(MouseEvent event) {
-        entrenadorSeleccionado = "Iris";
-        mostrarMensaje("Seleccionaste a Iris");
+        seleccionarEntrenador("Iris", event);
     }
 
     @FXML
     private void handleSerenaClick(MouseEvent event) {
-        entrenadorSeleccionado = "Serena";
-        mostrarMensaje("Seleccionaste a Serena");
+        seleccionarEntrenador("Serena", event);
     }
 
     @FXML
     private void handleKiaweClick(MouseEvent event) {
-        entrenadorSeleccionado = "Kiawe";
-        mostrarMensaje("Seleccionaste a Kiawe");
+        seleccionarEntrenador("Kiawe", event);
     }
 
     @FXML
     private void handleGiovanniClick(MouseEvent event) {
-        entrenadorSeleccionado = "Giovanni";
-        mostrarMensaje("Seleccionaste a Giovanni");
+        seleccionarEntrenador("Giovanni", event);
     }
 
-
-    private void mostrarMensaje(String mensaje) {
-        Alert alert = new Alert(AlertType.INFORMATION, mensaje, ButtonType.OK);
-        alert.setTitle("Selección de Entrenador");
-        alert.setHeaderText(null);  // No necesitamos encabezado
-        alert.showAndWait();
-    }
-
-    @FXML
-    private void handleElegirEntrenador(ActionEvent event) {
-        if (entrenadorSeleccionado != null) {
-            // Abrir CartasVista.fxml
+@FXML
+private void handleElegirEntrenador(ActionEvent event) {
+    if (entrenadorSeleccionado != null) {
+        mostrarMensajeBonitoTemporal("¡Has elegido a " + entrenadorSeleccionado + "!", 3000, () -> {
             try {
                 FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/CartasVista.fxml"));
                 Parent root = loader.load();
@@ -307,9 +298,53 @@ public class EntrenadoresController implements Initializable {
             } catch (Exception e) {
                 e.printStackTrace();
             }
-        } else {
-            mostrarMensaje("No se ha seleccionado ningún entrenador.");
-        }
+        });
+    } else {
+        mostrarMensaje("No se ha seleccionado ningún entrenador.");
     }
 }
 
+private void seleccionarEntrenador(String nombreEntrenador, MouseEvent event) {
+    Node source = (Node) event.getSource();
+    Pane carta = (Pane) source;
+
+    if (cartaSeleccionada != null) {
+        cartaSeleccionada.setStyle("");
+    }
+
+    carta.setStyle("-fx-border-color: gold; -fx-border-width: 4px; -fx-border-radius: 15px;");
+    cartaSeleccionada = carta;
+    entrenadorSeleccionado = nombreEntrenador;
+}
+
+private void mostrarMensaje(String mensaje) {
+    Alert alert = new Alert(Alert.AlertType.INFORMATION, mensaje, ButtonType.OK);
+    alert.setTitle("Selección de Entrenador");
+    alert.setHeaderText(null);
+    alert.showAndWait();
+}
+
+private void mostrarMensajeBonitoTemporal(String mensaje, int milisegundos, Runnable onClose) {
+    Label label = new Label(mensaje);
+    label.setStyle("-fx-font-size: 16px; -fx-text-fill: white; -fx-padding: 20px; -fx-font-family: 'Arial Rounded MT Bold';");
+
+    StackPane root = new StackPane(label);
+    root.setStyle("-fx-background-color: rgba(50,50,50,0.85); -fx-background-radius: 15px;");
+    root.setStyle("-fx-background-color: rgba(50,50,50,0.85); -fx-background-radius: 15px; -fx-padding: 20px;");
+
+    Scene scene = new Scene(root);
+    Stage stage = new Stage();
+    stage.initStyle(StageStyle.TRANSPARENT);
+    stage.setScene(scene);
+    stage.setAlwaysOnTop(true);
+    stage.show();
+
+    PauseTransition delay = new PauseTransition(Duration.millis(milisegundos));
+    delay.setOnFinished(e -> {
+        stage.close();
+        if (onClose != null) onClose.run();
+    });
+    delay.play();
+}
+
+}

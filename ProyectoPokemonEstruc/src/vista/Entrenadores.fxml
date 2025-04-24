@@ -9,13 +9,13 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.StackPane?>
 
-<ScrollPane fx:id="scrEntrenadores" fitToHeight="true" fitToWidth="true" prefHeight="780.0" prefWidth="1401.0" stylesheets="@../resources/styles.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.EntrenadoresController">
+<ScrollPane fx:id="scrEntrenadores" fitToHeight="true" fitToWidth="true" prefHeight="826.0" prefWidth="1401.0" stylesheets="@../resources/styles.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.EntrenadoresController">
 
     <content>
         <AnchorPane fx:id="anpFrame" prefHeight="778.0" prefWidth="1419.0">
             <children>
 
-                <ImageView fitHeight="770.0" fitWidth="1412.0" layoutY="-1.0" pickOnBounds="true">
+                <ImageView fitHeight="816.0" fitWidth="1412.0" layoutY="-1.0" pickOnBounds="true">
                     <image>
                         <Image url="@../resources/fondoEntrenadores.png" />
                     </image>
@@ -268,7 +268,12 @@
                         <String fx:value="entrenador-card-giovanni" />
                     </styleClass>
                 </StackPane>
-            <Button layoutX="46.0" layoutY="54.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="132.0" text="Elegir Entrenador" onAction="#handleElegirEntrenador" />
+            <Button layoutX="536.0" layoutY="708.0" mnemonicParsing="false" onAction="#handleElegirEntrenador" prefHeight="55.0" prefWidth="342.0" stylesheets="@../resources/styles.css" text="Elegir Entrenador">
+               <styleClass>
+                  <String fx:value="pokemon-name" />
+                  <String fx:value="water-image" />
+                  <String fx:value="pokemon-card-water" />
+               </styleClass></Button>
             </children>
         </AnchorPane>
     </content>

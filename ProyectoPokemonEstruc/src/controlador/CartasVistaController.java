@@ -563,6 +563,30 @@ public class CartasVistaController implements Initializable {
 
     @FXML
     private void IniciarTorneo(ActionEvent event) {
-    }
+    if (pokemonesAgregados == 4) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/torneo.fxml"));
+            AnchorPane root = loader.load();
 
+            Scene scene = new Scene(root);
+            Stage stage = (Stage) btnIniciarTorneo.getScene().getWindow();
+            stage.setScene(scene);
+            stage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Error al cargar el torneo");
+            alert.setHeaderText(null);
+            alert.setContentText("No se pudo cargar la pantalla del torneo.");
+            alert.showAndWait();
+        }
+    } else {
+        Alert alert = new Alert(Alert.AlertType.WARNING);
+        alert.setTitle("Selección Incompleta");
+        alert.setHeaderText(null);
+        alert.setContentText("Debes agregar exactamente 4 Pokémon para iniciar el torneo.");
+        alert.showAndWait();
+    }
+}
+    
 }
