@@ -26,12 +26,17 @@ import javafx.util.Duration;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
+import modelo.Pokemon;
+import modelo.ListaPokemon;
+
 /**
  * FXML Controller class
  *
  * @author gjche
  */
 public class CartasVistaController implements Initializable {
+
+    private ListaPokemon listaPokemon = new ListaPokemon();
 
     @FXML
     private StackPane stpCharizard;
@@ -367,28 +372,78 @@ public class CartasVistaController implements Initializable {
         String nombrePokemon = obtenerNombrePokemon(carta);
         lblPokemonSeleccionado.setText("Pokémon Seleccionado: " + nombrePokemon);
     }
+    
+    private Pokemon crearPokemon(String nombre) {
+    switch (nombre) {
+        case "Charizard":
+            return new Pokemon("Charizard", "Fuego", 78, 84, 78, 109, 85);
+        case "Blaziken":
+            return new Pokemon("Blaziken", "Fuego", 80, 120, 70, 110, 70);
+        case "Greninja":
+            return new Pokemon("Greninja", "Agua", 72, 95, 67, 103, 71);
+        case "Staraptor":
+            return new Pokemon("Staraptor", "Normal", 85, 120, 70, 50, 60);
+        case "Volcarona":
+            return new Pokemon("Volcarona", "Fuego", 85, 60, 65, 135, 105);
+        case "Arcanine":
+            return new Pokemon("Arcanine", "Fuego", 90, 110, 80, 100, 80);
+        case "Cloyster":
+            return new Pokemon("Cloyster", "Agua", 50, 95, 180, 85, 45);
+        case "Empoleon":
+            return new Pokemon("Empoleon", "Agua", 84, 86, 88, 111, 101);
+        case "Blastoise":
+            return new Pokemon("Blastoise", "Agua", 79, 83, 100, 85, 105);
+        case "Bulbasaur":
+            return new Pokemon("Bulbasaur", "Planta", 45, 49, 49, 65, 65);
+        case "Snorlax":
+            return new Pokemon("Snorlax", "Normal", 160, 110, 65, 65, 110);
+        case "Mewtwo":
+            return new Pokemon("Mewtwo", "Psíquico", 106, 110, 90, 154, 90);
+        default:
+            return null;  // Si no se encuentra el Pokémon
+    }
+}
+
 
     @FXML
     private void agregarPokemon(ActionEvent event) {
         if (cartaSeleccionada != null) {
             String nombrePokemon = obtenerNombrePokemon(cartaSeleccionada);
+            Pokemon p = crearPokemon(nombrePokemon);  // Crear el objeto Pokémon
 
-            if (pokemonesAgregados < pokebolas.length) {
+            boolean agregado = listaPokemon.agregarPokemon(p);  // Agregar el Pokémon a la lista personalizada
+
+            if (agregado && pokemonesAgregados < 4) {
+                // Añadir Pokémon al arreglo de Pokébolas
                 pokemonesEnPokebolas[pokemonesAgregados] = nombrePokemon;
-
                 pokebolas[pokemonesAgregados].setImage(new Image("/resources/pokeball.png"));
-                pokemonesAgregados++;
-            } else {
+                pokemonesAgregados++;  // Aumentar el contador de Pokémon agregados
+
+                // Mostrar mensaje de éxito
+                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                alert.setHeaderText(null);
+                alert.setTitle("¡Éxito!");
+                alert.setContentText("¡Pokémon agregado exitosamente!");
+                alert.showAndWait();
+
+                // Limpiar la carta seleccionada
+                cartaSeleccionada.setStyle("");
+                cartaSeleccionada = null;
+            } else if (pokemonesAgregados >= 4) {
+                // Si ya hay 4 Pokémon, mostrar un mensaje de error
                 Alert alert = new Alert(Alert.AlertType.ERROR);
                 alert.setHeaderText(null);
                 alert.setTitle("ERROR");
                 alert.setContentText("Ya hay 4 Pokémon agregados.");
                 alert.showAndWait();
+            } else {
+                // Si no se pudo agregar por otro motivo
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setHeaderText(null);
+                alert.setTitle("ERROR");
+                alert.setContentText("Hubo un problema al agregar el Pokémon.");
+                alert.showAndWait();
             }
-
-            // Limpiar la carta seleccionada
-            cartaSeleccionada.setStyle("");
-            cartaSeleccionada = null;
         }
     }
 
@@ -563,30 +618,30 @@ public class CartasVistaController implements Initializable {
 
     @FXML
     private void IniciarTorneo(ActionEvent event) {
-    if (pokemonesAgregados == 4) {
-        try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/torneo.fxml"));
-            AnchorPane root = loader.load();
+        if (pokemonesAgregados == 4) {
+            try {
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/torneo.fxml"));
+                AnchorPane root = loader.load();
 
-            Scene scene = new Scene(root);
-            Stage stage = (Stage) btnIniciarTorneo.getScene().getWindow();
-            stage.setScene(scene);
-            stage.show();
-        } catch (Exception e) {
-            e.printStackTrace();
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setTitle("Error al cargar el torneo");
+                Scene scene = new Scene(root);
+                Stage stage = (Stage) btnIniciarTorneo.getScene().getWindow();
+                stage.setScene(scene);
+                stage.show();
+            } catch (Exception e) {
+                e.printStackTrace();
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setTitle("Error al cargar el torneo");
+                alert.setHeaderText(null);
+                alert.setContentText("No se pudo cargar la pantalla del torneo.");
+                alert.showAndWait();
+            }
+        } else {
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Selección Incompleta");
             alert.setHeaderText(null);
-            alert.setContentText("No se pudo cargar la pantalla del torneo.");
+            alert.setContentText("Debes agregar exactamente 4 Pokémon para iniciar el torneo.");
             alert.showAndWait();
         }
-    } else {
-        Alert alert = new Alert(Alert.AlertType.WARNING);
-        alert.setTitle("Selección Incompleta");
-        alert.setHeaderText(null);
-        alert.setContentText("Debes agregar exactamente 4 Pokémon para iniciar el torneo.");
-        alert.showAndWait();
     }
-}
-    
+
 }

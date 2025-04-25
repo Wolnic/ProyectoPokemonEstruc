@@ -1,8 +1,7 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package modelo;
+
+
 
 /**
  *
@@ -13,196 +12,53 @@ package modelo;
  * Cordoba Hernandez Giovanny Josue  *
  * Pérez Rodríguez Carlos Roberto  *
  */
+
 public class Pokemon {
-    private String Nombre;
-    private String Tipo;
-    private int Vida;
-    private int Ataque;
-    private int Defensa;
-    private int AtaqueEspecial;
-    private int DefensaEspecial;
-    private int CodigoPokemon;
+    private String nombre;
+    private String tipo;
+    private int vida;
+    private int ataque;
+    private int defensa;
+    private int ataqueEspecial;
+    private int defensaEspecial;
 
-    public Pokemon(String nombre, String tipo, int codigo) {
-    this.Nombre = nombre;
-    this.CodigoPokemon = codigo;
-
-    switch (tipo) {
-        case "Normal":
-            this.Tipo = tipo;
-            this.Vida = 150;
-            this.Ataque = 50;
-            this.Defensa = 35;
-            this.AtaqueEspecial = 70;
-            this.DefensaEspecial = 60;
-            break;
-        case "Agua":
-            this.Tipo = tipo;
-            this.Vida = 190;
-            this.Ataque = 55;
-            this.Defensa = 45;
-            this.AtaqueEspecial = 75;
-            this.DefensaEspecial = 65;
-            break;
-        case "Fuego":
-            this.Tipo = tipo;
-            this.Vida = 115;
-            this.Ataque = 70;
-            this.Defensa = 45;
-            this.AtaqueEspecial = 80;
-            this.DefensaEspecial = 60;
-            break;
-        default:
-            throw new IllegalArgumentException("Tipo de Pokémon no válido.");
-    }
-}
-    public void CrearPokemon(String Nombre,String Tipo,int Codigo){
-        this.Nombre=Nombre;
-        this.CodigoPokemon=Codigo;
-        if(Tipo.equals("Normal")){
-            this.Tipo="Normal";
-            this.Vida=150;
-            this.Ataque=50;
-            this.Defensa=35;
-            this.AtaqueEspecial=70;
-            this.DefensaEspecial=60;
-        }
-        if(Tipo.equals("Agua")){
-            this.Tipo="Agua";
-            this.Vida=190;
-            this.Ataque=55;
-            this.Defensa=45;
-            this.AtaqueEspecial=75;
-            this.DefensaEspecial=65;
-        }
-        if(Tipo.equals("Fuego")){
-            this.Tipo="Fuego";
-            this.Vida=115;
-            this.Ataque=70;
-            this.Defensa=45;
-            this.AtaqueEspecial=80;
-            this.DefensaEspecial=60;
-        }
-    }
-    
-    public void atacar(Pokemon enemigo) {
-    enemigo.recibirDanio(this.Ataque);
-}
-
-    public void ataqueEspecial(Pokemon enemigo) {
-        int danio = this.AtaqueEspecial;
-
-        if (this.Tipo.equals("Fuego") && enemigo.Tipo.equals("Normal")) {
-            danio = 85;
-        } else if (this.Tipo.equals("Agua") && enemigo.Tipo.equals("Fuego")) {
-            danio = 85;
-        } else if (this.Tipo.equals("Normal") && enemigo.Tipo.equals("Agua")) {
-            danio = 75;
-        }
-
-        enemigo.recibirDanio(danio);
+    // Constructor
+    public Pokemon(String nombre, String tipo, int vida, int ataque, int defensa, int ataqueEspecial, int defensaEspecial) {
+        this.nombre = nombre;
+        this.tipo = tipo;
+        this.vida = vida;
+        this.ataque = ataque;
+        this.defensa = defensa;
+        this.ataqueEspecial = ataqueEspecial;
+        this.defensaEspecial = defensaEspecial;
     }
 
-    public void recibirDanio(int cantidad) {
-        this.Vida -= cantidad;
-        if (this.Vida < 0) this.Vida = 0;
-    }
-    
-    public void AtaqueEspecial(Pokemon Enemigo,Pokemon Pokemon){
-        if(Pokemon.Tipo.equals("Normal")){
-            if(Enemigo.Tipo.equals("Agua")){
-                Enemigo.Vida=Enemigo.Vida-75;
-            }
-            else{
-                Enemigo.Vida=Enemigo.Vida-Pokemon.AtaqueEspecial;
-            }
-        }
-        if(Pokemon.Tipo.equals("Fuego")){
-            if(Enemigo.Tipo.equals("Normal")){
-                Enemigo.Vida=Enemigo.Vida-85;
-            }
-            else{
-                Enemigo.Vida=Enemigo.Vida-Pokemon.AtaqueEspecial;
-            }
-        }
-        if(Pokemon.Tipo.equals("Agua")){
-            if(Enemigo.Tipo.equals("Fuego")){
-                Enemigo.Vida=Enemigo.Vida-85;
-            }
-            else{
-                Enemigo.Vida=Enemigo.Vida-Pokemon.AtaqueEspecial;
-            }
-        }
-    }
-    
-    public void RecibirAtaque(Pokemon Enemigo,Pokemon Pokemon){
-        Pokemon.Vida=Pokemon.Vida-Enemigo.Ataque;
-    }
-
+    // Getters y setters, si los necesitas
     public String getNombre() {
-        return Nombre;
-    }
-
-    public void setNombre(String Nombre) {
-        this.Nombre = Nombre;
+        return nombre;
     }
 
     public String getTipo() {
-        return Tipo;
-    }
-
-    public void setTipo(String Tipo) {
-        this.Tipo = Tipo;
+        return tipo;
     }
 
     public int getVida() {
-        return Vida;
-    }
-
-    public void setVida(int Vida) {
-        this.Vida = Vida;
+        return vida;
     }
 
     public int getAtaque() {
-        return Ataque;
-    }
-
-    public void setAtaque(int Ataque) {
-        this.Ataque = Ataque;
+        return ataque;
     }
 
     public int getDefensa() {
-        return Defensa;
-    }
-
-    public void setDefensa(int Defensa) {
-        this.Defensa = Defensa;
+        return defensa;
     }
 
     public int getAtaqueEspecial() {
-        return AtaqueEspecial;
-    }
-
-    public void setAtaqueEspecial(int AtaqueEspecial) {
-        this.AtaqueEspecial = AtaqueEspecial;
+        return ataqueEspecial;
     }
 
     public int getDefensaEspecial() {
-        return DefensaEspecial;
+        return defensaEspecial;
     }
-
-    public void setDefensaEspecial(int DefensaEspecial) {
-        this.DefensaEspecial = DefensaEspecial;
-    }
-
-    public int getCodigoPokemon() {
-        return CodigoPokemon;
-    }
-
-    public void setCodigoPokemon(int CodigoPokemon) {
-        this.CodigoPokemon = CodigoPokemon;
-    }
-    
-    
 }
-
