@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package modelo;
 
 
@@ -16,29 +13,23 @@ package modelo;
  * Pérez Rodríguez Carlos Roberto  *
  */
 public class NodoPokemon {
-    public Pokemon Pokemon;
-    public NodoPokemon Siguiente;
-    
-    public NodoPokemon(Pokemon pokemon){
-        this.Pokemon=pokemon;
-        this.Siguiente=null;
+    private Pokemon pokemon;
+    private NodoPokemon siguiente;
+
+    public NodoPokemon(Pokemon pokemon) {
+        this.pokemon = pokemon;
+        this.siguiente = null;
     }
 
     public Pokemon getPokemon() {
-        return Pokemon;
-    }
-
-    public void setPokemon(Pokemon Pokemon) {
-        this.Pokemon = Pokemon;
+        return pokemon;
     }
 
     public NodoPokemon getSiguiente() {
-        return Siguiente;
+        return siguiente;
     }
 
-    public void setSiguiente(NodoPokemon Siguiente) {
-        this.Siguiente = Siguiente;
+    public void setSiguiente(NodoPokemon siguiente) {
+        this.siguiente = siguiente;
     }
-    
-    
-}
+        }

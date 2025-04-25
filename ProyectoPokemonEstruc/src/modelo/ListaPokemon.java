@@ -1,32 +1,22 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package modelo;
-
 
 /**
  *
- * @author  *
- * Ocampo Pantoja José Mario  *
- * Sánchez Venegas Manuel Antonio  *
- * Delgado Jiménez Alexander  *
- * Cordoba Hernandez Giovanny Josue  *
- * Pérez Rodríguez Carlos Roberto  *
+ * @author * Ocampo Pantoja José Mario * Sánchez Venegas Manuel Antonio *
+ * Delgado Jiménez Alexander * Cordoba Hernandez Giovanny Josue * Pérez
+ * Rodríguez Carlos Roberto *
  */
 public class ListaPokemon {
-        private NodoPokemon cabeza;
-    private int cantidad;
-    private final int maxPokemon = 4;
+
+    private NodoPokemon cabeza;
 
     public ListaPokemon() {
-        this.cabeza = null;
-        this.cantidad = 0;
+        cabeza = null;
     }
 
+    // Agregar un Pokémon a la lista
     public boolean agregarPokemon(Pokemon pokemon) {
-        if (cantidad >= maxPokemon) {
-            System.out.println("No se puede agregar más Pokémon. Límite alcanzado.");
+        if (pokemon == null) {
             return false;
         }
 
@@ -34,51 +24,41 @@ public class ListaPokemon {
 
         if (cabeza == null) {
             cabeza = nuevoNodo;
-        } else {
-            NodoPokemon actual = cabeza;
-            while (actual.getSiguiente() != null) {
-                actual = actual.getSiguiente();
-            }
-            actual.setSiguiente(nuevoNodo);
+            return true;
         }
 
-        cantidad++;
+        NodoPokemon temp = cabeza;
+        while (temp.getSiguiente() != null) {
+            temp = temp.getSiguiente();
+        }
+
+        temp.setSiguiente(nuevoNodo);
         return true;
     }
 
-    public String mostrarLista() {
-        NodoPokemon actual = cabeza;
-        StringBuilder texto = new StringBuilder("Lista de Pokémon:\n");
+    // Obtener la cabeza de la lista
+    public NodoPokemon getCabeza() {
+        return cabeza;
+    }
+
+    // Establecer la cabeza de la lista
+    public void setCabeza(NodoPokemon cabeza) {
+        this.cabeza = cabeza;
+    }
+
+    // Filtrar los Pokémon por tipo y devolver una nueva lista con los Pokémon filtrados
+    public ListaPokemon cargarPorTipo(String tipoDeseado) {
+        ListaPokemon listaFiltrada = new ListaPokemon();
+        NodoPokemon actual = cabeza;  // Comienza desde la cabeza de la lista original
 
         while (actual != null) {
             Pokemon p = actual.getPokemon();
-            texto.append("Nombre: ").append(p.getNombre())
-                  .append("\nTipo: ").append(p.getTipo())
-                  .append("\nVida: ").append(p.getVida())
-                  .append("\nAtaque: ").append(p.getAtaque())
-                  .append("\nDefensa: ").append(p.getDefensa())
-                  .append("\nAtaque Especial: ").append(p.getAtaqueEspecial())
-                  .append("\nDefensa Especial: ").append(p.getDefensaEspecial())
-                  .append("\n\n");
+            if (p.getTipo().equalsIgnoreCase(tipoDeseado)) {
+                listaFiltrada.agregarPokemon(p);
+            }
             actual = actual.getSiguiente();
         }
 
-        return texto.toString();
-    }
-
-    public Pokemon obtenerPokemon(int index) {
-        if (index < 0 || index >= cantidad) return null;
-        NodoPokemon actual = cabeza;
-        int contador = 0;
-        while (actual != null) {
-            if (contador == index) return actual.getPokemon();
-            actual = actual.getSiguiente();
-            contador++;
-        }
-        return null;
-    }
-
-    public int getCantidad() {
-        return cantidad;
+        return listaFiltrada;
     }
 }
