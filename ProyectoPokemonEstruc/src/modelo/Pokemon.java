@@ -23,10 +23,39 @@ public class Pokemon {
     private int DefensaEspecial;
     private int CodigoPokemon;
 
-    public Pokemon(String charizard, String fuego, int i) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    public Pokemon(String nombre, String tipo, int codigo) {
+    this.Nombre = nombre;
+    this.CodigoPokemon = codigo;
+
+    switch (tipo) {
+        case "Normal":
+            this.Tipo = tipo;
+            this.Vida = 150;
+            this.Ataque = 50;
+            this.Defensa = 35;
+            this.AtaqueEspecial = 70;
+            this.DefensaEspecial = 60;
+            break;
+        case "Agua":
+            this.Tipo = tipo;
+            this.Vida = 190;
+            this.Ataque = 55;
+            this.Defensa = 45;
+            this.AtaqueEspecial = 75;
+            this.DefensaEspecial = 65;
+            break;
+        case "Fuego":
+            this.Tipo = tipo;
+            this.Vida = 115;
+            this.Ataque = 70;
+            this.Defensa = 45;
+            this.AtaqueEspecial = 80;
+            this.DefensaEspecial = 60;
+            break;
+        default:
+            throw new IllegalArgumentException("Tipo de Pokémon no válido.");
     }
-    
+}
     public void CrearPokemon(String Nombre,String Tipo,int Codigo){
         this.Nombre=Nombre;
         this.CodigoPokemon=Codigo;
@@ -56,8 +85,27 @@ public class Pokemon {
         }
     }
     
-    public void Atacar(Pokemon Enemigo,Pokemon Pokemon){
-        Enemigo.Vida=Enemigo.Vida-Pokemon.Ataque;
+    public void atacar(Pokemon enemigo) {
+    enemigo.recibirDanio(this.Ataque);
+}
+
+    public void ataqueEspecial(Pokemon enemigo) {
+        int danio = this.AtaqueEspecial;
+
+        if (this.Tipo.equals("Fuego") && enemigo.Tipo.equals("Normal")) {
+            danio = 85;
+        } else if (this.Tipo.equals("Agua") && enemigo.Tipo.equals("Fuego")) {
+            danio = 85;
+        } else if (this.Tipo.equals("Normal") && enemigo.Tipo.equals("Agua")) {
+            danio = 75;
+        }
+
+        enemigo.recibirDanio(danio);
+    }
+
+    public void recibirDanio(int cantidad) {
+        this.Vida -= cantidad;
+        if (this.Vida < 0) this.Vida = 0;
     }
     
     public void AtaqueEspecial(Pokemon Enemigo,Pokemon Pokemon){
