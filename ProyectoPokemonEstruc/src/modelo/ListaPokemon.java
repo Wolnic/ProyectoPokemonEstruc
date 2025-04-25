@@ -7,6 +7,8 @@ package modelo;
  * Rodríguez Carlos Roberto *
  */
 public class ListaPokemon {
+    private int Cantidad;
+    private String Nombre;
 
     private NodoPokemon cabeza;
 
@@ -14,7 +16,6 @@ public class ListaPokemon {
         cabeza = null;
     }
 
-    // Agregar un Pokémon a la lista
     public boolean agregarPokemon(Pokemon pokemon) {
         if (pokemon == null) {
             return false;
@@ -36,20 +37,17 @@ public class ListaPokemon {
         return true;
     }
 
-    // Obtener la cabeza de la lista
     public NodoPokemon getCabeza() {
         return cabeza;
     }
 
-    // Establecer la cabeza de la lista
     public void setCabeza(NodoPokemon cabeza) {
         this.cabeza = cabeza;
     }
 
-    // Filtrar los Pokémon por tipo y devolver una nueva lista con los Pokémon filtrados
     public ListaPokemon cargarPorTipo(String tipoDeseado) {
         ListaPokemon listaFiltrada = new ListaPokemon();
-        NodoPokemon actual = cabeza;  // Comienza desde la cabeza de la lista original
+        NodoPokemon actual = cabeza;  
 
         while (actual != null) {
             Pokemon p = actual.getPokemon();
@@ -61,4 +59,32 @@ public class ListaPokemon {
 
         return listaFiltrada;
     }
+
+    public int getCantidad() {
+        return Cantidad;
+    }
+
+    public Pokemon obtenerPokemon(int i) {
+    if (i < 0) {
+        return null;     }
+
+    NodoPokemon actual = cabeza;
+    int contador = 0;
+
+    while (actual != null) {
+        if (contador == i) {
+            return actual.getPokemon(); 
+        }
+        actual = actual.getSiguiente();
+        contador++;
+    }
+
+    return null; 
+}
+
+    public String getNombre() {
+        return Nombre;
+    }
+    
+    
 }

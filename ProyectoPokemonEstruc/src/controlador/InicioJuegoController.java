@@ -27,9 +27,6 @@ public class InicioJuegoController implements Initializable {
     @FXML
     private Button btnIniciarJuego;
 
-    /**
-     * Initializes the controller class.
-     */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
@@ -38,14 +35,9 @@ public class InicioJuegoController implements Initializable {
     @FXML
     private void iniciar(MouseEvent event) {
         try {
-        // Cargar el FXML de la nueva vista
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/Entrenadores.fxml"));
         Parent root = loader.load();
-
-        // Obtener la escena actual desde el evento
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-
-        // Cambiar la escena
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();

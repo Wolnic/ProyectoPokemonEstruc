@@ -15,7 +15,7 @@ import javafx.stage.Stage;
 public class PokemonSeleccionadoController implements Initializable {
 
     @FXML
-    private ImageView imgCarta; // Asegúrate de que tengas un ImageView para mostrar la carta.
+    private ImageView imgCarta; 
     @FXML
     private ImageView imgFondoSeleccion;
     @FXML
@@ -23,7 +23,6 @@ public class PokemonSeleccionadoController implements Initializable {
     @FXML
     private Label lblPokemonSelecc;
 
-    // Método para mostrar la carta del Pokémon
     public void mostrarCarta(String rutaImagen, String nombre) {
     try {
         if (rutaImagen == null || rutaImagen.isEmpty()) {
@@ -44,7 +43,6 @@ public class PokemonSeleccionadoController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // Inicialización adicional si fuera necesario en el futuro
     }
 
     @FXML

@@ -290,10 +290,10 @@ public class CartasVistaController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
 
-        // Inicializamos el HashMap
+       
         rutaCartas = new HashMap<>();
 
-        // Añadimos las relaciones nombre - ruta
+        
         rutaCartas.put("Charizard", "/resources/cartaCharizard.png");
         rutaCartas.put("Blaziken", "/resources/cartaBlaziken.png");
         rutaCartas.put("Greninja", "/resources/cartaGreninja.png");
@@ -338,9 +338,9 @@ public class CartasVistaController implements Initializable {
         card.setTranslateY(300);
         card.setOpacity(0);
 
-        // Entrada principal
+        
         TranslateTransition translateIn = new TranslateTransition(Duration.millis(500), card);
-        translateIn.setToY(-20); // Pasa un poco hacia arriba (rebote)
+        translateIn.setToY(-20); 
         translateIn.setDelay(Duration.millis(delayMillis));
         translateIn.setInterpolator(javafx.animation.Interpolator.EASE_OUT);
 
@@ -349,12 +349,12 @@ public class CartasVistaController implements Initializable {
         fadeIn.setToValue(1.0);
         fadeIn.setDelay(Duration.millis(delayMillis));
 
-        // Rebote hacia posición final
+        
         TranslateTransition bounceBack = new TranslateTransition(Duration.millis(200), card);
         bounceBack.setToY(0);
         bounceBack.setInterpolator(javafx.animation.Interpolator.EASE_IN);
 
-        // Al terminar la primera animación, hace el rebote
+        
         translateIn.setOnFinished(e -> bounceBack.play());
 
         translateIn.play();
@@ -400,7 +400,7 @@ public class CartasVistaController implements Initializable {
         case "Mewtwo":
             return new Pokemon("Mewtwo", "Psíquico", 106, 110, 90, 154, 90);
         default:
-            return null;  // Si no se encuentra el Pokémon
+            return null;  
     }
 }
 
@@ -409,35 +409,35 @@ public class CartasVistaController implements Initializable {
     private void agregarPokemon(ActionEvent event) {
         if (cartaSeleccionada != null) {
             String nombrePokemon = obtenerNombrePokemon(cartaSeleccionada);
-            Pokemon p = crearPokemon(nombrePokemon);  // Crear el objeto Pokémon
+            Pokemon p = crearPokemon(nombrePokemon);  
 
-            boolean agregado = listaPokemon.agregarPokemon(p);  // Agregar el Pokémon a la lista personalizada
+            boolean agregado = listaPokemon.agregarPokemon(p);  
 
             if (agregado && pokemonesAgregados < 4) {
-                // Añadir Pokémon al arreglo de Pokébolas
+                
                 pokemonesEnPokebolas[pokemonesAgregados] = nombrePokemon;
                 pokebolas[pokemonesAgregados].setImage(new Image("/resources/pokeball.png"));
-                pokemonesAgregados++;  // Aumentar el contador de Pokémon agregados
+                pokemonesAgregados++;  
 
-                // Mostrar mensaje de éxito
+                
                 Alert alert = new Alert(Alert.AlertType.INFORMATION);
                 alert.setHeaderText(null);
                 alert.setTitle("¡Éxito!");
                 alert.setContentText("¡Pokémon agregado exitosamente!");
                 alert.showAndWait();
 
-                // Limpiar la carta seleccionada
+                
                 cartaSeleccionada.setStyle("");
                 cartaSeleccionada = null;
             } else if (pokemonesAgregados >= 4) {
-                // Si ya hay 4 Pokémon, mostrar un mensaje de error
+                
                 Alert alert = new Alert(Alert.AlertType.ERROR);
                 alert.setHeaderText(null);
                 alert.setTitle("ERROR");
                 alert.setContentText("Ya hay 4 Pokémon agregados.");
                 alert.showAndWait();
             } else {
-                // Si no se pudo agregar por otro motivo
+                
                 Alert alert = new Alert(Alert.AlertType.ERROR);
                 alert.setHeaderText(null);
                 alert.setTitle("ERROR");
@@ -473,11 +473,11 @@ public class CartasVistaController implements Initializable {
         } else if (carta == stpMewtwo) {
             return "Mewtwo";
         }
-        return "Desconocido";  // En caso de que no se encuentre la carta
+        return "Desconocido"; 
     }
 
     private String obtenerNombrePokemonPorPokebola(int index) {
-        // Verificar que el índice esté dentro del rango
+        
         if (index >= 0 && index < pokemonesEnPokebolas.length) {
             String nombrePokemon = pokemonesEnPokebolas[index];
             if (nombrePokemon != null) {
@@ -576,36 +576,36 @@ public class CartasVistaController implements Initializable {
     private void mostrarCartaSeleccionada(int index) {
         String nombrePokemon = obtenerNombrePokemonPorPokebola(index);
 
-        // Ahora abrir la ventana con el nombre del Pokémon seleccionado
+        
         abrirVentanaCarta(nombrePokemon);
     }
 
     private void abrirVentanaCarta(String nombrePokemon) {
         try {
-            // Verificar si existe la ruta para el Pokémon seleccionado
+            
             String rutaImagen = rutaCartas.get(nombrePokemon);
             if (rutaImagen == null) {
                 throw new Exception("No se encontró la ruta de la carta para " + nombrePokemon);
             }
 
-            // Cargar el FXML para la nueva ventana
+           
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/PokemonSeleccionado.fxml"));
             AnchorPane root = loader.load();
 
-            // Obtener el controlador de la nueva ventana
+            
             PokemonSeleccionadoController SeleccionController = loader.getController();
 
-            // Mostrar la carta del Pokémon, pasándole el nombre del archivo de la carta
+           
             SeleccionController.mostrarCarta(rutaImagen, nombrePokemon);
 
-            // Crear y mostrar la nueva escena
+            
             Stage stage = new Stage();
             Scene scene = new Scene(root);
             stage.setScene(scene);
             stage.setTitle("Carta de Pokémon");
             stage.show();
         } catch (Exception e) {
-            // Mostrar alerta si ocurre un error
+            
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setHeaderText(null);
             alert.setTitle("Error al abrir la ventana");

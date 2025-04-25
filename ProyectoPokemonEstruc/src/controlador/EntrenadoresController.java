@@ -126,9 +126,7 @@ public class EntrenadoresController implements Initializable {
                     FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/CartasVista.fxml"));
                     Parent root = loader.load();
 
-                    // Aquí puedes enviar los entrenadores seleccionados a la siguiente vista
-                    // CartasController controlador = loader.getController();
-                    // controlador.setParticipantes(entrenadorSeleccionado, oponentes);
+                    
                     Stage stage = new Stage();
                     stage.setScene(new Scene(root));
                     stage.setTitle("Vista del Pokémon");

@@ -71,9 +71,6 @@ public class TorneoController implements Initializable {
     private ListaPokemon equipoJugador;
     private int rondaActual = 1;
 
-    /**
-     * Initializes the controller class.
-     */
      @Override
     public void initialize(URL url, ResourceBundle rb) {
         equipoJugador = new ListaPokemon();
@@ -132,21 +129,5 @@ public class TorneoController implements Initializable {
         }
     }
 
-    private Pokemon crearPokemonPorNombre(String nombre) {
-        switch (nombre) {
-            case "Charizard": return new Pokemon("Charizard", "Fuego", 1);
-            case "Blaziken": return new Pokemon("Blaziken", "Fuego", 2);
-            case "Volcarona": return new Pokemon("Volcarona", "Fuego", 3);
-            case "Greninja": return new Pokemon("Greninja", "Agua", 4);
-            case "Empoleon": return new Pokemon("Empoleon", "Agua", 5);
-            case "Cloyster": return new Pokemon("Cloyster", "Agua", 6);
-            case "Snorlax": return new Pokemon("Snorlax", "Normal", 7);
-            case "Mewtwo": return new Pokemon("Mewtwo", "Psíquico", 8);
-            case "Staraptor": return new Pokemon("Staraptor", "Normal", 9);
-            case "Bulbasaur": return new Pokemon("Bulbasaur", "Planta", 10);
-            case "Arcanine": return new Pokemon("Arcanine", "Fuego", 11);
-            case "Blastoise": return new Pokemon("Blastoise", "Agua", 12);
-            default: return new Pokemon("Desconocido", "Normal", 99);
-        }
-    }
+    
 }

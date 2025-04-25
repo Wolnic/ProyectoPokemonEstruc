@@ -53,7 +53,7 @@ public class BatallaPokemonController implements Initializable {
     @FXML
     private Label lblHpCPU;
 
-    // Variables para manejar HP actuales y máximos
+   
     private int hpJugador = 150;
     private int hpCPU = 150;
     private final int hpMaximo = 150;

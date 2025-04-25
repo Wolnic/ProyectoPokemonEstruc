@@ -32,7 +32,6 @@ public class ListaEntrenadores {
 
         for (int i = 0; i < entrenadores.length && index < cantidad; i++) {
             if (!entrenadores[i].getNombre().equals(nombreSeleccionado)) {
-                // Algoritmo simple sin java.util.Random
                 int hash = (entrenadores[i].getNombre().length() * (i + 7)) % 3;
                 if (hash != 0) {
                     resultado[index++] = entrenadores[i];
@@ -40,7 +39,6 @@ public class ListaEntrenadores {
             }
         }
 
-        // Si no se llenó la cantidad, rellena con otros
         for (int i = 0; i < entrenadores.length && index < cantidad; i++) {
             if (!entrenadores[i].getNombre().equals(nombreSeleccionado) && !yaExiste(resultado, entrenadores[i], index)) {
                 resultado[index++] = entrenadores[i];

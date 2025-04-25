@@ -14,6 +14,7 @@ package modelo;
  */
 
 public class Pokemon {
+    private int CodigoPokemon;
     private String nombre;
     private String tipo;
     private int vida;
@@ -22,7 +23,6 @@ public class Pokemon {
     private int ataqueEspecial;
     private int defensaEspecial;
 
-    // Constructor
     public Pokemon(String nombre, String tipo, int vida, int ataque, int defensa, int ataqueEspecial, int defensaEspecial) {
         this.nombre = nombre;
         this.tipo = tipo;
@@ -33,7 +33,6 @@ public class Pokemon {
         this.defensaEspecial = defensaEspecial;
     }
 
-    // Getters y setters, si los necesitas
     public String getNombre() {
         return nombre;
     }
@@ -60,5 +59,8 @@ public class Pokemon {
 
     public int getDefensaEspecial() {
         return defensaEspecial;
+    }
+    public int getCodigoPokemon(){
+        return CodigoPokemon;
     }
 }
